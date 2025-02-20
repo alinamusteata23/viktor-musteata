@@ -1,0 +1,21 @@
+@import "../../app/variables.scss";
+
+.header {
+  padding-top: 16px;
+
+  @media screen and (min-width: $laptop) {
+    padding-top: 24px;
+  }
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  @media screen and (min-width: $laptop) {
+    padding-top: 36px;
+  }
+}

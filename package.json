@@ -1,5 +1,7 @@
 {
   "name": "viktor-musteata",
+  "github": "https://github.com/alinamusteata23/viktor-musteata",
+  "figma": "https://www.figma.com/design/enJJeE0BO9E7J69RlYnRG1/alina-dad?node-id=2-2&t=BzvdE9DcYrZVzw0c-0",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,13 +11,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "15.1.7",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.1.7"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
-    "@eslint/eslintrc": "^3"
+    "sass": "^1.85.0"
   }
 }

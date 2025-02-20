@@ -1,0 +1,64 @@
+@import "../../../app/variables.scss";
+
+.burgerBtn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  width: 48px;
+  height: 26px;
+  position: relative;
+
+  //   &:focus,
+  //   &:hover {
+  //     & .middleLine {
+  //       transform: rotate(-30deg);
+  //     }
+
+  //     &::before {
+  //       transform: rotate(30deg);
+  //       transform-origin: left;
+  //     }
+
+  //     &::after {
+  //       transform: rotate(30deg);
+  //       transform-origin: right;
+  //     }
+  //   }
+}
+
+.middleLine {
+  width: 48px;
+  height: 2px;
+  background-color: $textColor;
+
+  //   transform: rotate3d(0, 1, 1, -45deg);
+  //   transform: rotate(-45deg);
+}
+
+.burgerBtn::before,
+.burgerBtn::after {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background-color: $textColor;
+  position: absolute;
+}
+
+.burgerBtn::before {
+  top: 0;
+  left: 0;
+
+  //   transform: rotate(30deg);
+  //   left: 1px;
+
+  transform-origin: left;
+}
+
+.burgerBtn::after {
+  bottom: 0;
+  right: 0;
+
+  //   transform: rotate(30deg);
+  transform-origin: right;
+}

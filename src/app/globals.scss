@@ -1,0 +1,69 @@
+@import "./variables.scss";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  -moz-transition-duration: 250ms;
+  -o-transition-duration: 250ms;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-koho);
+  font-weight: 500;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $bodyColor;
+  color: $textColor;
+}
+header,
+footer {
+  width: 100%;
+  max-width: 100%;
+}
+
+.container {
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: aqua;
+  max-width: 1180px;
+
+  @media screen and (min-width: $laptop) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sectionTitle {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.3;
+
+  @media screen and (min-width: $laptop) {
+    font-size: 48px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
