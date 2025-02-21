@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Logo.module.scss";
 
-const Logo = () => {
+const Logo = ({ className }) => {
   return (
-    <a href="#hero" className={styles.logo}>
+    <a href="#hero" className={`${styles.logo} ${className}`}>
       Viktor Musteata
     </a>
   );

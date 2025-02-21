@@ -30,6 +30,11 @@ body {
   background-color: $bodyColor;
   color: $textColor;
 }
+
+main {
+  flex: 1;
+}
+
 header,
 footer {
   width: 100%;
@@ -40,11 +45,12 @@ footer {
   margin-left: 20px;
   margin-right: 20px;
   background-color: aqua;
-  max-width: 1180px;
 
   @media screen and (min-width: $laptop) {
     margin-left: auto;
     margin-right: auto;
+
+    max-width: 1180px;
   }
 }
 

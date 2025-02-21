@@ -8,6 +8,10 @@
   width: 48px;
   height: 26px;
   position: relative;
+
+  @media screen and (min-width: $laptop) {
+    display: none;
+  }
 }
 
 .middleLine {

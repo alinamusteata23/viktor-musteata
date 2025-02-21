@@ -8,6 +8,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={`container ${styles.container}`}>
         <Logo className={styles.logo} />
+
         <BurgerBtn />
       </div>
     </header>
@@ -15,3 +16,4 @@ const Header = () => {
 };
 
 export default Header;
+// fill="#ff8a00" style="fill: var(--color1, #ff8a00)"

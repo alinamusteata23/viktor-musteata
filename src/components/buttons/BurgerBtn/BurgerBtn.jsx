@@ -1,27 +1,34 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import styles from "./BurgerBtn.module.scss";
+import { SiteContext } from "@/context/SiteContext";
+import { useWindowResize } from "@/hooks/windowResize";
 
 const BurgerBtn = () => {
-  const [burgerIsClicked, setBurgerIsClicked] = useState(false);
+  const { mobileMenu, setMobileMenu } = useContext(SiteContext);
 
-  const burgerButnToggle = () => {
-    setBurgerIsClicked(!burgerIsClicked);
+  const { isMobile, isTablet, isLaptop, isDesktop } = useWindowResize();
+
+  const toggleMobileMenu = () => {
+    setMobileMenu(!mobileMenu);
   };
-
-  return (
-    <button
-      className={
-        burgerIsClicked
-          ? `${styles.burgerBtn} ${styles.btnIsClicked}`
-          : styles.burgerBtn
-      }
-      onClick={burgerButnToggle}
-    >
-      <div className={styles.middleLine}></div>
-    </button>
-  );
+  if (isLaptop || isDesktop) {
+    return <></>;
+  } else {
+    return (
+      <button
+        className={
+          mobileMenu
+            ? `${styles.burgerBtn} ${styles.btnIsClicked}`
+            : styles.burgerBtn
+        }
+        onClick={toggleMobileMenu}
+      >
+        <div className={styles.middleLine}></div>
+      </button>
+    );
+  }
 };
 
 export default BurgerBtn;

@@ -1,6 +1,8 @@
-import { Niconne, KoHo } from "next/font/google";
+import { Niconne, KoHo, Manrope } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import { SiteProvider } from "@/context/SiteContext";
 
 const niconne = Niconne({
   variable: "--font-niconne",
@@ -14,11 +16,11 @@ const koho = KoHo({
   weight: ["500", "600"],
 });
 
-// const manrope = Manrope({
-//   variable: "--font-manrope",
-//   subsets: ["latin"],
-//   weight: ["400"],
-// });
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export const metadata = {
   title: "Perfekte Handwerkskunst für Ihr Zuhause",
@@ -29,10 +31,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="de">
-      <body className={`${niconne.variable} ${koho.variable}`}>
-        <Header />
-        <main>{children}</main>
-      </body>
+      <SiteProvider>
+        <body
+          className={`${niconne.variable} ${koho.variable} ${manrope.variable}`}
+        >
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </body>
+      </SiteProvider>
     </html>
   );
 }
