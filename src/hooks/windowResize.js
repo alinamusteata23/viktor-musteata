@@ -24,7 +24,7 @@ export function useWindowResize() {
   }, [handleResizeMobile]);
 
   const handleResizeTablet = useCallback(() => {
-    if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+    if (window.innerWidth >= 768 && window.innerWidth < 1280) {
       setTablet(true);
     } else {
       setTablet(false);
