@@ -3,7 +3,7 @@ import styles from "./Logo.module.scss";
 
 const Logo = ({ className }) => {
   return (
-    <a href="#hero" className={`${styles.logo} ${className}`}>
+    <a href="tel:+380503738465" className={`${styles.logo} ${className}`}>
       Viktor Musteata
     </a>
   );

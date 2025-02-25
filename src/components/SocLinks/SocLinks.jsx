@@ -7,7 +7,7 @@ const SocLinks = ({ className }) => {
     <address className={className}>
       {socLinks.map((el) => {
         return (
-          <Link key={el.title} href={el.href}>
+          <Link key={el.title} href={el.href} target="_blank">
             <svg>
               <use href={el.icon}></use>
             </svg>

@@ -4,7 +4,7 @@ import React from "react";
 
 const Navigation = ({ className }) => {
   return (
-    <nav className={className}>
+    <nav className={`${className}`}>
       {navigation.map((el) => {
         return (
           <Link href={`#${el.title}`} key={el.title}>

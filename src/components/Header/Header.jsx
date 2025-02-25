@@ -8,6 +8,7 @@ import { useWindowResize } from "@/hooks/windowResize";
 import MobileMenu from "./MobileMenu/MobileMenu";
 import Navigation from "../Navigation/Navigation";
 import { SiteContext } from "@/context/SiteContext";
+import SocLinks from "../SocLinks/SocLinks";
 
 const Header = () => {
   const { isMobile, isTablet, isLaptop, isDesktop } = useWindowResize();
@@ -18,9 +19,17 @@ const Header = () => {
     <header className={styles.header}>
       <div className={`container ${styles.container}`}>
         <Logo className={styles.logo} />
-        {isMobile || isTablet ? <BurgerBtn /> : <Navigation />}
+        {isMobile || isTablet ? (
+          <BurgerBtn />
+        ) : (
+          <Navigation className={styles.navigation} />
+        )}
         {mobileMenu && <MobileMenu />}
       </div>
+
+      {(isLaptop || isDesktop) && (
+        <SocLinks className={`container ${styles.socLinks}`} />
+      )}
     </header>
   );
 };
