@@ -1,7 +1,7 @@
 import React from "react";
 
 const FacadesRepair = () => {
-  return <section>FacadesRepair</section>;
+  return <section id="FacadesRepair">FacadesRepair</section>;
 };
 
 export default FacadesRepair;

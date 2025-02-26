@@ -5,6 +5,7 @@ import AboutUs from "@/sections/AboutUs/AboutUs";
 import ConcreteWorks from "@/sections/ConcreteWorks/ConcreteWorks";
 import FacadesRepair from "@/sections/FacadesRepair/FacadesRepair";
 import Faq from "@/sections/Faq/Faq";
+import FloorsLaying from "@/sections/FloorsLaying/FloorsLaying";
 import Hero from "@/sections/Hero/Hero";
 import PaintingWorks from "@/sections/PaintingWorks/PaintingWorks";
 import Testimonials from "@/sections/Testimonials/Testimonials";
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <Tiling />
+      <FloorsLaying />
       <WhyUs />
       <PaintingWorks />
       <FacadesRepair />

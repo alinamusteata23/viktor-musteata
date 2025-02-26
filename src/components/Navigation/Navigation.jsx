@@ -7,7 +7,7 @@ const Navigation = ({ className }) => {
     <nav className={`${className}`}>
       {navigation.map((el) => {
         return (
-          <Link href={`#${el.title}`} key={el.title}>
+          <Link href={`#${el.id}`} key={el.title}>
             {el.title}
           </Link>
         );
