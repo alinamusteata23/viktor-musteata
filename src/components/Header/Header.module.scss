@@ -2,7 +2,15 @@
 
 .header {
   padding-top: 16px;
+  padding-bottom: 16px;
   position: fixed;
+  z-index: 100;
+
+  background-image: linear-gradient(
+    $bodyColor 50%,
+    transparent 80%,
+    transparent 100%
+  );
 
   @media screen and (min-width: $laptop) {
     padding-top: 24px;

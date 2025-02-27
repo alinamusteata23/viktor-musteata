@@ -1,23 +1,143 @@
 @import "../../app/variables.scss";
 
+$heroImgWidth: 33%;
+$heroImgAspectRatio: 1/1;
+
 .section {
-  height: calc(100vh + 100px);
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    url("../../../public/imgs/hero-1.webp"),
-    url("../../../public/imgs/hero-2.webp");
-  background-repeat: no-repeat, no-repeat;
+  min-height: calc(100vh + 100px);
+  // min-height: 100vh;
+  background-repeat: no-repeat;
 
-  background-size: 100%, 128%, 1%;
-  background-position: center, 0% -108px, 100vw 280px;
-  //   background-size: cover, cover;
-  //   background-position: center, 50% 0%;
+  @media screen and (orientation: portrait) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+      url("../../../public/imgs/hero-1.webp");
+    background-repeat: no-repeat;
+    background-size: 100%, 128%;
+    background-position: center, 0% 0%;
 
-  @media screen and (min-width: $laptop) {
+    padding-top: 18%;
+  }
+
+  @media screen and (orientation: landscape) {
+    padding-top: 100px;
+
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
       url("../../../public/imgs/hero-1.webp"),
       url("../../../public/imgs/hero-2.webp");
     background-position-x: center, 0%, 100%;
-    background-position-y: center, 0px, 280px;
+    background-position-y: center, -20px, 18vw;
     background-size: 100% 100%, 64% auto, 64% auto;
+  }
+
+  @media screen and (min-width: $laptop) {
+    padding-top: 132px;
+
+    background-position-y: center, 8px, 24vw;
+  }
+}
+
+.container {
+  @media screen and (min-width: $laptop) {
+    // display: flex;
+    position: relative;
+  }
+}
+
+.imgs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  aspect-ratio: 285/242;
+
+  position: relative;
+
+  @media screen and (min-width: $laptop) {
+    width: 760px;
+    height: 648px;
+  }
+}
+
+.heroImg {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+
+  &:nth-child(1) {
+    width: $heroImgWidth;
+    aspect-ratio: $heroImgAspectRatio;
+    margin-bottom: auto;
+  }
+
+  &:nth-child(2) {
+    width: 52%;
+    aspect-ratio: 3/2;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  &:nth-child(3) {
+    width: $heroImgWidth;
+    aspect-ratio: $heroImgAspectRatio;
+
+    margin-top: auto;
+  }
+
+  & img {
+    object-fit: cover;
+  }
+}
+
+.contentWrapp {
+  & h1 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.29;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  & h2 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.29;
+    text-align: right;
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 644px;
+    // height: 332px;
+
+    justify-content: space-between;
+
+    & h1,
+    & h2 {
+      text-align: right;
+      font-size: 32px;
+    }
+
+    & h1 {
+      margin-bottom: 56px;
+    }
+
+    & h2 {
+      margin-bottom: 128px;
+    }
+  }
+}
+
+#callBtn {
+  @media screen and (min-width: $laptop) {
+    width: 252px;
+    height: 64px;
+    margin-left: auto;
   }
 }

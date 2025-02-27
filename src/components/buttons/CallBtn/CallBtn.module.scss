@@ -1,0 +1,20 @@
+@import "../../../app/variables.scss";
+
+.callBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+
+  background-color: $btnColor;
+  color: $bodyColor;
+  height: 40px;
+  font-size: 16px;
+
+  @media screen and (min-width: $laptop) {
+    width: 204px;
+    height: 32px;
+
+    font-size: 24px;
+  }
+}
