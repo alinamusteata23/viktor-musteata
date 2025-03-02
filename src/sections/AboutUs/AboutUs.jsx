@@ -1,11 +1,10 @@
 import Image from "next/image";
-import {sectionsData} from '@/data/sectionsData';
+import { sectionsData } from '@/data/sectionsData';
 import styles from "./AboutUs.module.scss";
 
 
 const AboutUs = () => {
-  const data = sectionsData.filter(section=> section.name === "AboutUs");
-  console.log('data', data)
+  const data = sectionsData.find(section=> section.name === "AboutUs");
 
 
   return <section>
