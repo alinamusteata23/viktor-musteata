@@ -54,11 +54,9 @@ footer {
 }
 
 section{
-  padding: 0px 20px;
   margin-bottom: 32px;
 
   @media screen and (min-width: $laptop) {
-    padding: 0px 50px;
         margin-bottom: 64px;
   }
 }
