@@ -1,9 +1,10 @@
-@import "../../app/_variables";
+@import "../../app/variables";
 
 .container{
 display: flex;
 flex-direction: column;
 row-gap: 24px;
+margin:0;
 
 @media screen and (min-width: $laptop) {
     row-gap: 64px;
