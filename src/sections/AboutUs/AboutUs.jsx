@@ -7,7 +7,7 @@ const AboutUs = () => {
   const data = sectionsData.find(section=> section.name === "AboutUs");
 
 
-  return <section>
+  return <section id="AboutUs">
     <div className={`container ${styles.container}`}>
       <h2 className="sectionTitle">{data?.title}</h2>
       <div className={styles.infoWrapper}>
@@ -20,7 +20,7 @@ const AboutUs = () => {
         <p className={styles.infoText}>{data.text}</p>
       </div>
       <ul className={styles.dataList}>
-        {data?.statistics?.map(item=> <li className={styles.dataItem}>
+        {data?.statistics?.map(item=> <li className={styles.dataItem} key={item.direction}>
           <p className={styles.dataNumber}>{item.quantity}</p>
           <p className={styles.dataText}>{item.direction}</p>
         </li>)}        

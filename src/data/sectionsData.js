@@ -128,4 +128,60 @@ export const sectionsData = [
       },
     ],
   },
+
+  {
+    name: "Testimonials",
+    title: "Rückmeldung",
+    reviews: [
+      {
+        author: "Wade Warren", 
+        rating: 4.0,
+        comment: "Awesome website and funnel for your business",
+      },
+       {
+        author: "Ilon Mask", 
+        rating: 5.0,
+        comment: "Funnel for business and website",
+      },
+      {
+        author: "Warren Wade", 
+        rating: 4.5,
+        comment: "Funnel for your business and awesome website",
+      },
+    ],
+  },
+
+  {
+    name:"Faq",
+    blocks:[
+      {
+        title:"Bereiten Sie die Oberfläche vor der Fliesenverlegung vor?",
+        text:"Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere.",  
+      },
+      {
+        title:"Wie lange dauert die Fliesenverlegung?",
+        text:"Second.",  
+      },
+       {
+        title:"Welche zusätzlichen Dienstleistungen bieten Sie an?",
+        text:"Third.",  
+      },
+       {
+        title:"Verlegen Sie Fliesen auch im Außenbereich?",
+        text:"Fourth.",  
+      },
+       {
+        title:"Können Sie mit Fliesen arbeiten, die der Kunde bereitstellt?",
+        text:"Fifth.",  
+      },
+       {
+        title:"Mit welchen Arten von Fliesen arbeiten Sie?",
+        text:"Sixth.",  
+      },     
+        {
+        title:"Kann man mehrere Dienstleistungen gleichzeitig buchen?",
+        text:"Seventh.",  
+      },   
+    ]
+  }
 ];
