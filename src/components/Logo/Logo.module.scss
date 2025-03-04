@@ -1,13 +1,13 @@
-@import "../../app/variables.scss";
+@use "../../app/variables";
 
 .logo {
   font-family: var(--font-niconne);
   font-weight: 400;
-  color: $accentColor;
+  color: variables.$accentColor;
 
   &:hover,
   &:focus {
-    filter: $hoverBrightnes;
+    filter: variables.$hoverBrightnes;
     font-weight: 900;
     text-shadow: 0px 0px 0.5px rgba(0, 0, 0, 0.8);
   }

@@ -1,24 +1,24 @@
-@import '../../app/variables.scss';
+@use "../../app/variables";
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 23px;
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: variables.$tablet) {
     row-gap: 32px;
   }
-  @media screen and (min-width: $laptop) {
+  @media screen and (min-width: variables.$laptop) {
     row-gap: 64px;
   }
 }
 #btn {
   width: 100%;
   height: 40px;
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: variables.$tablet) {
     width: 280px;
   }
-  @media screen and (min-width: $laptop) {
+  @media screen and (min-width: variables.$laptop) {
     width: 252px;
     height: 63px;
   }

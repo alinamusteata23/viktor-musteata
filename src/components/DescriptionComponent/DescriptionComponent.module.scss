@@ -1,13 +1,13 @@
-@import '../../app/variables.scss';
+@use "../../app/variables";
 
 .descriptionComponent {
   display: flex;
   flex-direction: column;
   row-gap: 23px;
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: variables.$tablet) {
     row-gap: 32px;
   }
-  @media screen and (min-width: $laptop) {
+  @media screen and (min-width: variables.$laptop) {
     row-gap: 64px;
   }
 }
@@ -16,8 +16,8 @@
   font-weight: 400;
   font-size: 24px;
   letter-spacing: 0.06em;
-  color: $textColor;
-  @media screen and (min-width: $laptop) {
+  color: variables.$textColor;
+  @media screen and (min-width: variables.$laptop) {
     font-weight: 600;
     font-size: 48px;
   }
@@ -38,8 +38,8 @@
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.06em;
-  color: $textColor;
-  @media screen and (min-width: $laptop) {
+  color: variables.$textColor;
+  @media screen and (min-width: variables.$laptop) {
     font-size: 32px;
   }
 }

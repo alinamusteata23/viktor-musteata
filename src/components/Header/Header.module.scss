@@ -1,4 +1,4 @@
-@import "../../app/variables.scss";
+@use "../../app/variables";
 
 .header {
   padding-top: 16px;
@@ -7,12 +7,12 @@
   z-index: 100;
 
   background-image: linear-gradient(
-    $bodyColor 50%,
+    variables.$bodyColor 50%,
     transparent 80%,
     transparent 100%
   );
 
-  @media screen and (min-width: $laptop) {
+  @media screen and (min-width: variables.$laptop) {
     padding-top: 24px;
   }
 }
@@ -25,7 +25,7 @@
 
 .logo {
   font-size: 24px;
-  @media screen and (min-width: $laptop) {
+  @media screen and (min-width: variables.$laptop) {
     font-size: 36px;
   }
 }
@@ -37,7 +37,7 @@
   & a:focus {
     text-shadow: 0px 0px 0.5px black;
   }
-  @media screen and (min-width: $laptop) {
+  @media screen and (min-width: variables.$laptop) {
     display: flex;
     gap: 16px;
     font-size: 16px;
@@ -47,7 +47,7 @@
 .socLinks {
   display: none;
 
-  @media screen and (min-width: $laptop) {
+  @media screen and (min-width: variables.$laptop) {
     display: flex;
     gap: 12px;
     justify-content: flex-end;
@@ -60,10 +60,10 @@
 
       &:hover,
       &:focus {
-        filter: $hoverBrightnes;
+        filter: variables.$hoverBrightnes;
         box-shadow: 0px 0px 4px rgb(255, 255, 255),
           0px 0px 6px rgba(0, 0, 0, 0.8);
-        // border: 1px solid white;
+
         scale: 0.95;
       }
     }
@@ -72,7 +72,7 @@
       width: 100%;
       height: 100%;
 
-      fill: $accentColor;
+      fill: variables.$accentColor;
     }
   }
 }
