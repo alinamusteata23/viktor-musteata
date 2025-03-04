@@ -1,10 +1,5 @@
 @use "../../app/variables";
 
-:root {
-  --heroimgwidth: 33%;
-  --heroimgaspectratio: 1/1;
-}
-
 .section {
   min-height: calc(100vh + 100px);
   background-repeat: no-repeat;
@@ -64,8 +59,8 @@
   border-radius: 12px;
 
   &:nth-child(1) {
-    width: var(--heroimgwidth);
-    aspect-ratio: var(--heroimgaspectratio);
+    width: 33%;
+    aspect-ratio: 1/1;
     margin-bottom: auto;
   }
 
@@ -82,8 +77,8 @@
   }
 
   &:nth-child(3) {
-    width: var(--heroimgwidth);
-    aspect-ratio: var(--heroimgaspectratio);
+    width: 33%;
+    aspect-ratio: 1/1;
 
     margin-top: auto;
   }
