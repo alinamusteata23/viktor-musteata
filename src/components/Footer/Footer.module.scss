@@ -1,0 +1,51 @@
+@use "../../app/variables";
+
+.footer {
+  background-color: variables.$footerBg;
+  color: variables.$bodyColor;
+}
+
+.container {
+  margin: 32px 24px;
+}
+
+.contentWrapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+
+  @media screen and (min-width: variables.$laptop) {
+    align-items: flex-start;
+  }
+}
+
+.logo {
+  font-size: 40px;
+}
+
+.socLinks {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  & a {
+    width: 32px;
+    height: 32px;
+
+    & svg {
+      fill: variables.$bodyColor;
+    }
+  }
+}
+
+.mail {
+  font-size: 20px;
+}
+
+.cardsWrapp {
+  & svg {
+    width: 40px;
+    height: 40px;
+  }
+}

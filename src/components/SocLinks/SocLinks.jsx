@@ -1,13 +1,19 @@
 import React from "react";
 import { socLinks } from "@/data/socLinks";
 import Link from "next/link";
+import styles from "./SocLinks.module.scss";
 
 const SocLinks = ({ className }) => {
   return (
     <address className={className}>
       {socLinks.map((el) => {
         return (
-          <Link key={el.title} href={el.href} target="_blank">
+          <Link
+            key={el.title}
+            href={el.href}
+            target="_blank"
+            className={styles.socLink}
+          >
             <svg>
               <use href={el.icon}></use>
             </svg>
