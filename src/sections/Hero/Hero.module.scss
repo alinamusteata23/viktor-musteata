@@ -1,15 +1,14 @@
 @use "../../app/variables";
 
 .section {
-  min-height: calc(100vh + 100px);
+  min-height: 100vh;
   background-repeat: no-repeat;
 
   @media screen and (orientation: portrait) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-      url("../../../public/imgs/hero-1.webp");
+    background-image: url("../../../public/imgs/heroMobile.webp");
     background-repeat: no-repeat;
-    background-size: 100%, 128%;
-    background-position: center, 0% 0%;
+    background-size: 128%;
+    background-position: 0% 0%;
 
     padding-top: 18%;
   }
@@ -17,18 +16,20 @@
   @media screen and (orientation: landscape) {
     padding-top: 100px;
 
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-      url("../../../public/imgs/hero-1.webp"),
-      url("../../../public/imgs/hero-2.webp");
-    background-position-x: center, 0%, 100%;
-    background-position-y: center, -20px, 18vw;
-    background-size: 100% 100%, 64% auto, 64% auto;
-  }
+    position: relative;
 
-  @media screen and (min-width: variables.$laptop) {
-    padding-top: 132px;
-
-    background-position-y: center, 8px, 24vw;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 110%;
+      background-image: url("../../../public/imgs/heroLaptop.webp");
+      background-size: cover;
+      background-position: 72% -20px;
+      z-index: -1;
+    }
   }
 }
 
