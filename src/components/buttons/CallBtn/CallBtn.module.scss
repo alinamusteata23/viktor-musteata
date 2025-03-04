@@ -1,4 +1,4 @@
-@import "../../../app/variables.scss";
+@use "../../../app/variables";
 
 .callBtn {
   display: flex;
@@ -6,12 +6,12 @@
   align-items: center;
   border-radius: 24px;
 
-  background-color: $btnColor;
-  color: $bodyColor;
+  background-color: variables.$btnColor;
+  color: variables.$bodyColor;
   height: 40px;
   font-size: 16px;
 
-  @media screen and (min-width: $laptop) {
+  @media screen and (min-width: variables.$laptop) {
     width: 204px;
     height: 32px;
 

@@ -1,14 +1,14 @@
-@import '../../app/variables.scss';
+@use "../../app/variables";
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 23px;
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: variables.$tablet) {
     row-gap: 32px;
   }
-  @media screen and (min-width: $laptop) {
+  @media screen and (min-width: variables.$laptop) {
     row-gap: 64px;
   }
 }

@@ -1,87 +1,87 @@
-@import "../../app/variables";
+@use "../../app/variables";
 
-.container{
-display: flex;
-flex-direction: column;
-row-gap: 24px;
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
 
-@media screen and (min-width: $laptop) {
+  @media screen and (min-width: variables.$laptop) {
     row-gap: 64px;
-}
-}
-
-.infoWrapper{
-    display: flex;
-    flex-direction: column;
-    row-gap: 16px;
-
-    @media screen and (min-width: $laptop) {
-        flex-direction: row;
-        row-gap: 0;
-        column-gap: 20px;
-    }
+  }
 }
 
-.img{
-    margin: 0 auto;
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
 
-@media screen and (min-width: $laptop) {
+  @media screen and (min-width: variables.$laptop) {
+    flex-direction: row;
+    row-gap: 0;
+    column-gap: 20px;
+  }
+}
+
+.img {
+  margin: 0 auto;
+
+  @media screen and (min-width: variables.$laptop) {
     margin: 0;
     width: 480px;
     height: 588px;
-}
-}
-
-.infoText{
-    font-weight: 500;
-    font-size:16px;
-    line-height: 1.3;
-
-    @media screen and (min-width: $laptop) {
-        font-size: 32px;
-    }
+  }
 }
 
-.dataList{
-    display: flex;
-    justify-content: center;
-    column-gap: 6px;
+.infoText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
 
-    @media screen and (min-width: $laptop) {
-         column-gap: 20px;
-    }
+  @media screen and (min-width: variables.$laptop) {
+    font-size: 32px;
+  }
 }
 
-.dataItem{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8px 16px;
-    border-radius: 24px;
-    border: 1px solid $borderColor;
+.dataList {
+  display: flex;
+  justify-content: center;
+  column-gap: 6px;
 
-        @media screen and (min-width: $laptop) {
-            row-gap: 16px;
-            padding: 26px 48px;
-        }
+  @media screen and (min-width: variables.$laptop) {
+    column-gap: 20px;
+  }
 }
 
-.dataNumber{
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.3;
+.dataItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 24px;
+  border: 1px solid variables.$borderColor;
 
-            @media screen and (min-width: $laptop) {
-                font-size: 96px;
-            }
+  @media screen and (min-width: variables.$laptop) {
+    row-gap: 16px;
+    padding: 26px 48px;
+  }
 }
 
-.dataText{
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.3;
+.dataNumber {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
 
-            @media screen and (min-width: $laptop) {
-                font-size: 36px;
-            }
+  @media screen and (min-width: variables.$laptop) {
+    font-size: 96px;
+  }
+}
+
+.dataText {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.3;
+
+  @media screen and (min-width: variables.$laptop) {
+    font-size: 36px;
+  }
 }
