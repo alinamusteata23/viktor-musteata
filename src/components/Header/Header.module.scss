@@ -25,6 +25,14 @@
 
 .logo {
   font-size: 24px;
+
+  &:hover,
+  &:focus {
+    filter: variables.$hoverBrightnes;
+    font-weight: 900;
+    text-shadow: 0px 0px 0.5px rgba(0, 0, 0, 0.8);
+  }
+
   @media screen and (min-width: variables.$laptop) {
     font-size: 36px;
   }
