@@ -1,5 +1,11 @@
 @use "../../app/variables";
 
+@mixin linkHover {
+  transform: translateX(4px);
+  scale: 1.05;
+  text-shadow: 0px 0px 1.2px white;
+}
+
 .footer {
   background-color: variables.$footerBg;
   color: variables.$bodyColor;
@@ -7,21 +13,49 @@
 
 .container {
   margin: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @media screen and (min-width: variables.$tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: variables.$laptop) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 956px;
+  }
 }
 
 .contentWrapp {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
 
-  @media screen and (min-width: variables.$laptop) {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+
+  &:first-child {
+    gap: 32px;
+  }
+
+  @media screen and (min-width: variables.$tablet) {
     align-items: flex-start;
   }
 }
 
 .logo {
   font-size: 40px;
+  color: variables.$foterLogoColor;
+  &:hover,
+  &:focus {
+    font-weight: 900;
+    text-shadow: 0px 0px 0.5px rgba(0, 0, 0, 0.8);
+  }
 }
 
 .socLinks {
@@ -37,15 +71,67 @@
       fill: variables.$bodyColor;
     }
   }
+
+  @media screen and (min-width: variables.$tablet) {
+    justify-content: space-between;
+    width: 176px;
+  }
 }
 
-.mail {
-  font-size: 20px;
+.link {
+  &:hover,
+  &:focus {
+    @include linkHover;
+  }
 }
 
 .cardsWrapp {
   & svg {
     width: 40px;
     height: 40px;
+
+    &:first-child {
+      margin-right: 32px;
+    }
+  }
+}
+
+.footerTitle {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.footerNavigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  & a:focus,
+  & a:hover {
+    @include linkHover;
+  }
+
+  @media screen and (min-width: variables.$tablet) {
+    align-items: flex-start;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.allRights {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 12px;
+  font-family: Montserrat;
+  font-weight: 500;
+
+  & a {
+    color: variables.$foterLogoColor;
+
+    &:hover,
+    &:focus {
+      text-shadow: 0px 0px 0.5px rgba(255, 255, 255, 0.8);
+    }
   }
 }
