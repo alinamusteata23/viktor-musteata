@@ -3,6 +3,7 @@ import CallBtn from '@/components/buttons/CallBtn/CallBtn';
 import DescriptionComponent from '@/components/DescriptionComponent/DescriptionComponent';
 import { sectionsData } from '@/data/sectionsData';
 import styles from './ConcreteWorks.module.scss';
+import SectionSlider from '@/components/SectionSlider/SectionSlider';
 
 const ConcreteWorks = () => {
   const floorLayingData = sectionsData.find(
@@ -12,6 +13,7 @@ const ConcreteWorks = () => {
     <section id="ConcreteWorks">
       <div className={`${styles.container} container`}>
         {floorLayingData && <DescriptionComponent data={floorLayingData} />}
+        {floorLayingData && <SectionSlider data={floorLayingData} />}
         <CallBtn id={styles.btn} />
       </div>
     </section>
