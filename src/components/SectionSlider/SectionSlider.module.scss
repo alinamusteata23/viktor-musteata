@@ -1,0 +1,8 @@
+@use '../../app/variables';
+
+.container {
+  @media screen and (min-width: variables.$tablet) {
+  }
+  @media screen and (min-width: variables.$laptop) {
+  }
+}
