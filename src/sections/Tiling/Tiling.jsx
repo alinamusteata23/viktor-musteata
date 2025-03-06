@@ -15,30 +15,13 @@ const Tiling = () => {
       <div className={`container ${styles.container}`}>
         <h3 className="sectionTitle">{tilingData.title}</h3>
         <div className={styles.imgsWrapper}>
-          <div className={styles.imgWrap}>
-            <Image
-              src={tilingData.mainImages[0].imgSrc}
-              fill
-              sizes="33vw"
-              alt="tiling example"
-            />
-          </div>
-          <div className={styles.imgWrap}>
-            <Image
-              src={tilingData.mainImages[1].imgSrc}
-              fill
-              sizes="33vw"
-              alt="tiling example"
-            />
-          </div>
-          <div className={styles.imgWrap}>
-            <Image
-              src={tilingData.mainImages[2].imgSrc}
-              fill
-              sizes="33vw"
-              alt="tiling example"
-            />
-          </div>
+          {tilingData?.mainImages.map((el) => {
+            return (
+              <div className={styles.imgWrap}>
+                <Image src={el.imgSrc} fill sizes="33vw" alt={el.imgAlt} />
+              </div>
+            );
+          })}
         </div>
         <p className={styles.description}>{tilingData.text}</p>
         {tilingData ? <SectionSlider data={tilingData} /> : null}
