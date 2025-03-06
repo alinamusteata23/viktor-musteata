@@ -9,13 +9,29 @@ const Hero = () => {
       <div className={`container ${styles.container}`}>
         <ul className={styles.imgs}>
           <li className={styles.heroImg}>
-            <Image src="/imgs/heroimg-1.jpg" alt="heroImg" fill={true} />
+            <Image
+              src="/imgs/heroimg-1.jpg"
+              alt="heroImg"
+              fill={true}
+              sizes="33vw"
+            />
           </li>
           <li className={styles.heroImg}>
-            <Image src="/imgs/heroimg-2.jpg" alt="heroImg-2" fill={true} />
+            sizes="(max-width: 768px) 30vw, 33vw"
+            <Image
+              src="/imgs/heroimg-2.jpg"
+              alt="heroImg-2"
+              fill={true}
+              sizes="33vw"
+            />
           </li>
           <li className={styles.heroImg}>
-            <Image src="/imgs/heroimg-3.jpg" alt="heroImg" fill={true} />
+            <Image
+              src="/imgs/heroimg-3.jpg"
+              alt="heroImg"
+              fill={true}
+              sizes="33vw"
+            />
           </li>
         </ul>
         <div className={styles.contentWrapp}>

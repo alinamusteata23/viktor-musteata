@@ -15,7 +15,7 @@ import WhyUs from "@/sections/WhyUs/WhyUs";
 export default function Home() {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
       <AboutUs />
       <Tiling />
       <FloorsLaying />
