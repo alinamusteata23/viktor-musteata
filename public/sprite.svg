@@ -29,5 +29,23 @@
 <path fill="#f79e1b" style="fill: var(--color4, #f79e1b)" d="M31.057 19.579v-0.318h0.128v-0.065h-0.327v0.065h0.128v0.318h0.070zM31.691 19.579v-0.384h-0.1l-0.115 0.264-0.115-0.264h-0.1v0.384h0.071v-0.29l0.108 0.25h0.073l0.108-0.25v0.29h0.071z"></path>
 </symbol>
 
+<symbol id="icon-cross" viewBox="0 0 32 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4" d="M16 0v32"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4" d="M0 16h32"></path>
+</symbol>
+
+<symbol id="icon-minus" viewBox="0 0 336 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="32" d="M19.207 16h300.793"></path>
+</symbol>
+
+<symbol id="icon-cross-color" viewBox="0 0 32 32">
+<path fill="none" stroke="#646464" style="stroke: var(--color1, #646464)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4" d="M16 0v32"></path>
+<path fill="none" stroke="#646464" style="stroke: var(--color1, #646464)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4" d="M0 16h32"></path>
+</symbol>
+
+<symbol id="icon-minus-color" viewBox="0 0 336 32">
+<path fill="none" stroke="#ff8a00" style="stroke: var(--color1, #ff8a00)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="32" d="M19.207 16h300.793"></path>
+</symbol>
+
 </defs>
 </svg>

@@ -1,4 +1,4 @@
-import { v4 } from 'uuid';
+;import { v4 } from 'uuid';
 
 export const sectionsData = [
   {
@@ -177,34 +177,39 @@ export const sectionsData = [
 
   {
     name: 'Faq',
+    title: 'FAQ – Häufig gestellte Fragen',
     blocks: [
       {
-        title: 'Bereiten Sie die Oberfläche vor der Fliesenverlegung vor?',
-        text: 'Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere.',
+        question: 'Bereiten Sie die Oberfläche vor der Fliesenverlegung vor?',
+        answer: 'Ja, ich gleiche die Oberfläche aus, trage Abdichtungen auf und bereite den Untergrund für eine hochwertige Verlegung vor.',
       },
       {
-        title: 'Wie lange dauert die Fliesenverlegung?',
-        text: 'Second.',
+        question: 'Wie lange dauert die Fliesenverlegung?',
+        answer: 'Die Dauer der Fliesenverlegung hängt von der Fläche, der Art der Fliesen und der Komplexität des Projekts ab. Je nach Anforderungen kann die Arbeit zwischen 1 Stunde und 10 Tagen dauern.',
       },
       {
-        title: 'Welche zusätzlichen Dienstleistungen bieten Sie an?',
-        text: 'Third.',
+        question: 'Welche zusätzlichen Dienstleistungen bieten Sie an?',
+        answer: 'Neben der Fliesenverlegung biete ich Bodenbelagsarbeiten (Laminat, Parkett, Vinyl), Fassadenrenovierungen (Reinigung, Putz, Anstrich) und Betonarbeiten (Fundamente, Estriche, dekorative Elemente) an.',
       },
       {
-        title: 'Verlegen Sie Fliesen auch im Außenbereich?',
-        text: 'Fourth.',
+        question: 'Verlegen Sie Fliesen auch im Außenbereich?',
+        answer: 'Ja, ich verlege Fliesen sowohl in Innenräumen als auch im Außenbereich, z. B. auf Terrassen, Balkonen und Treppen.',
       },
       {
-        title: 'Können Sie mit Fliesen arbeiten, die der Kunde bereitstellt?',
-        text: 'Fifth.',
+        question: 'Können Sie mit Fliesen arbeiten, die der Kunde bereitstellt?',
+        answer: 'Ja, ich kann mit Ihren Materialien arbeiten oder Sie bei der Auswahl unterstützen.',
       },
       {
-        title: 'Mit welchen Arten von Fliesen arbeiten Sie?',
-        text: 'Sixth.',
+        question: 'Können Sie bei der Farbauswahl und Materialentscheidung helfen?',
+        answer: 'Natürlich! Ich helfe Ihnen, Farben und Materialien auszuwählen, damit Ihr Raum harmonisch und stilvoll aussieht.',
       },
       {
-        title: 'Kann man mehrere Dienstleistungen gleichzeitig buchen?',
-        text: 'Seventh.',
+        question: 'Mit welchen Arten von Fliesen arbeiten Sie?',
+        answer: 'Ich arbeite mit Keramikfliesen, Mosaik, Feinsteinzeug und Naturstein.',
+      },
+       {
+        question: 'Kann man mehrere Dienstleistungen gleichzeitig buchen?',
+        answer: 'Ja, ich kann eine Kombination von Dienstleistungen ausführen, wie z. B. Fliesenverlegung, Bodenbelagsarbeiten und Fassadenrenovierung.',
       },
     ],
   },
