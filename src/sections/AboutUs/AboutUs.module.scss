@@ -10,6 +10,17 @@
   }
 }
 
+.title {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.3;
+
+  @media screen and (min-width: variables.$laptop) {
+    font-weight: 600;
+    font-size: 48px;
+  }
+}
+
 .infoWrapper {
   display: flex;
   flex-direction: column;

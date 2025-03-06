@@ -8,7 +8,7 @@ const AboutUs = () => {
   return (
     <section id="AboutUs">
       <div className={`container ${styles.container}`}>
-        <h2 className="sectionTitle">{data?.title}</h2>
+        <h2 className={styles.title}>{data?.title}</h2>
         <div className={styles.infoWrapper}>
           <Image
             className={styles.img}

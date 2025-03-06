@@ -1,0 +1,94 @@
+@use "../../app/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  @media screen and (min-width: variables.$laptop) {
+    row-gap: 64px;
+  }
+}
+
+.faqList{
+    margin-left: -20px;
+    margin-right: -20px;
+
+    @media screen and (min-width: variables.$tablet) {
+        max-width: 940px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.faqItem {
+  padding: 16px 20px;
+  border-top: 1px solid variables.$faqItemBorderColor;
+  border-bottom: 1px solid variables.$faqItemBorderColor;
+
+  @media screen and (min-width: variables.$laptop) {
+    padding: 40px;
+  }
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 8px;
+  font-size: 16px;
+  line-height: 2;
+  cursor: pointer;
+
+  @media screen and (min-width: variables.$laptop) {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.4;
+    column-gap: 24px;
+  }
+
+  & svg {
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+  }
+}
+
+.isActiveQuestion{
+ color: variables.$foterLogoColor;
+}
+
+.isOpenSvg {
+  fill: variables.$foterLogoColor;
+  stroke: variables.$foterLogoColor;
+}
+
+.isClosedSvg {
+  fill: variables.$crossColor;
+  stroke: variables.$crossColor;
+}
+
+.answerWrapp {
+  interpolate-size: allow-keywords; //for chrome
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.isClosed {
+  max-height: 0;
+}
+
+.isOpen {
+  max-height: 300px;
+  padding-top: 12px;
+}
+
+.answer {
+  font-size: 14px;
+  line-height: 1.7;
+
+  @media screen and (min-width: variables.$tablet) {
+    font-size: 18px;
+  }
+}
