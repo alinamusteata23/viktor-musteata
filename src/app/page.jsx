@@ -18,13 +18,13 @@ export default function Home() {
       {/* <Hero /> */}
       <AboutUs />
       <Tiling />
-      <FloorsLaying />
+      {/* <FloorsLaying />
       <WhyUs />
       <PaintingWorks />
       <FacadesRepair />
       <ConcreteWorks />
       <Testimonials />
-      <Faq />
+      <Faq /> */}
     </>
   );
 }

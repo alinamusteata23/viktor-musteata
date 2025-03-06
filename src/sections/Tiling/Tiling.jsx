@@ -1,25 +1,23 @@
 import React from "react";
 import styles from "./Tiling.module.scss";
 import Image from "next/image";
+import SectionSlider from "@/components/SectionSlider/SectionSlider";
+
+import { sectionsData } from "../../data/sectionsData";
+
+const tilingData = sectionsData.find(
+  (section) => section.title === "Fliesenverlegung"
+);
 
 const Tiling = () => {
   return (
     <section id="Tiling">
       <div className={`container ${styles.container}`}>
-        <h3 className="sectionTitle">Fliesenverlegung</h3>
+        <h3 className="sectionTitle">{tilingData.title}</h3>
         <div className={styles.imgsWrapper}>
           <div className={styles.imgWrap}>
             <Image
-              src="/imgs/Tiling-1.webp"
-              fill
-              sizes="33vw"
-              alt="tiling example"
-            />
-          </div>
-          <div className={styles.imgWrap}>
-            alt="tiling example"
-            <Image
-              src="/imgs/Tiling-2.webp"
+              src={tilingData.mainImages[0].imgSrc}
               fill
               sizes="33vw"
               alt="tiling example"
@@ -27,20 +25,23 @@ const Tiling = () => {
           </div>
           <div className={styles.imgWrap}>
             <Image
-              src="/imgs/Tiling-3.webp"
+              src={tilingData.mainImages[1].imgSrc}
+              fill
+              sizes="33vw"
+              alt="tiling example"
+            />
+          </div>
+          <div className={styles.imgWrap}>
+            <Image
+              src={tilingData.mainImages[2].imgSrc}
               fill
               sizes="33vw"
               alt="tiling example"
             />
           </div>
         </div>
-        <p className={styles.description}>
-          Wir bieten professionelle Fliesenverlegung für Sie, um Ihrem Raum ein
-          modernes und elegantes Aussehen zu verleihen. Mit hochwertigen
-          Materialien und präziser Ausführung sorgen wir für langlebige und
-          wasserdichte Ergebnisse. Vertrauen Sie auf unsere Erfahrung, um Ihren
-          Raum in einen stilvollen Rückzugsort zu verwandeln
-        </p>
+        <p className={styles.description}>{tilingData.text}</p>
+        {tilingData ? <SectionSlider data={tilingData} /> : null}
       </div>
     </section>
   );
