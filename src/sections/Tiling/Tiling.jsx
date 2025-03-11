@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "motion/react";
 import styles from "./Tiling.module.scss";
 import Image from "next/image";
 import SectionSlider from "@/components/SectionSlider/SectionSlider";
@@ -17,9 +20,16 @@ const Tiling = () => {
         <div className={styles.imgsWrapper}>
           {tilingData?.mainImages.map((el, i) => {
             return (
-              <div className={styles.imgWrap} key={i}>
+              <motion.div
+                key={i}
+                className={styles.imgWrap}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: i * 0.2 }}
+                viewport={{ amount: 0.8 }}
+              >
                 <Image src={el.imgSrc} fill sizes="33vw" alt={el.imgAlt} />
-              </div>
+              </motion.div>
             );
           })}
         </div>
