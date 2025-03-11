@@ -14,6 +14,12 @@
 
   display: flex;
   flex-direction: column;
+
+  overflow-x: hidden;
+}
+
+.mobMenuNone {
+  display: none;
 }
 
 .nav {
@@ -31,6 +37,18 @@
       font-weight: 900;
     }
   }
+
+  transform: translateX(110%);
+}
+
+.navVisible {
+  animation: navVisible 1s linear forwards;
+}
+
+@keyframes navVisible {
+  to {
+    transform: translateX(0%);
+  }
 }
 
 .socLinks {
@@ -41,9 +59,22 @@
   & a {
     width: 48px;
     height: 48px;
+    transform: translateY(200%);
   }
 
   & svg {
     fill: variables.$accentColor;
+  }
+}
+
+.socLinksVisible {
+  & a {
+    animation: socLinksVisible 1s linear 100ms forwards;
+  }
+}
+
+@keyframes socLinksVisible {
+  to {
+    transform: translateY(0%);
   }
 }

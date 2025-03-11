@@ -2,18 +2,14 @@
 
 import { navigation } from "@/data/navigation";
 import Link from "next/link";
-import React, { useContext } from "react";
+import React from "react";
 
-const Navigation = ({ className }) => {
-  const handleClick = () => {
-    setMobileMenu(false);
-  };
-
+const Navigation = ({ className, onClick }) => {
   return (
     <nav className={`${className}`}>
       {navigation.map((el) => {
         return (
-          <Link href={`#${el.id}`} key={el.title} onClick={handleClick}>
+          <Link href={`#${el.id}`} key={el.title} onClick={onClick}>
             {el.title}
           </Link>
         );

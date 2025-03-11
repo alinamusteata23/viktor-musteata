@@ -15,9 +15,9 @@ const Tiling = () => {
       <div className={`container ${styles.container}`}>
         <h3 className="sectionTitle">{tilingData.title}</h3>
         <div className={styles.imgsWrapper}>
-          {tilingData?.mainImages.map((el) => {
+          {tilingData?.mainImages.map((el, i) => {
             return (
-              <div className={styles.imgWrap}>
+              <div className={styles.imgWrap} key={i}>
                 <Image src={el.imgSrc} fill sizes="33vw" alt={el.imgAlt} />
               </div>
             );
