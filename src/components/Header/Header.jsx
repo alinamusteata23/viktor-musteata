@@ -13,7 +13,7 @@ import SocLinks from "../SocLinks/SocLinks";
 const Header = () => {
   const { isMobile, isTablet, isLaptop, isDesktop } = useWindowResize();
 
-  const { mobileMenu } = useContext(SiteContext);
+  // const { mobileMenu } = useContext(SiteContext);
 
   return (
     <header className={styles.header}>
@@ -24,7 +24,9 @@ const Header = () => {
         ) : (
           <Navigation className={styles.navigation} />
         )}
-        {mobileMenu && <MobileMenu />}
+        {/* {mobileMenu && <MobileMenu />} */}
+
+        {(isMobile || isTablet) && <MobileMenu />}
       </div>
 
       {(isLaptop || isDesktop) && (

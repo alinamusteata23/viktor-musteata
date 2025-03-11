@@ -5,10 +5,23 @@ import styles from "./BurgerBtn.module.scss";
 import { SiteContext } from "@/context/SiteContext";
 
 const BurgerBtn = () => {
-  const { mobileMenu, setMobileMenu } = useContext(SiteContext);
+  const { mobileMenu, setMobileMenu, setmobileMenuContent } =
+    useContext(SiteContext);
 
   const toggleMobileMenu = () => {
-    setMobileMenu(!mobileMenu);
+    if (mobileMenu) {
+      setmobileMenuContent(false);
+
+      setTimeout(() => {
+        setMobileMenu(false);
+      }, 500);
+    } else {
+      setMobileMenu(true);
+
+      setTimeout(() => {
+        setmobileMenuContent(true);
+      }, 500);
+    }
   };
 
   return (

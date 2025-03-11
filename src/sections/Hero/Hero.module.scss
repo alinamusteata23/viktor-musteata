@@ -1,12 +1,10 @@
 @use "../../app/variables";
 
 .section {
-  // min-height: 100vh;
   background-repeat: no-repeat;
 
   @media screen and (orientation: portrait) {
     background-image: url("../../../public/imgs/heroMobile.webp");
-    background-repeat: no-repeat;
     background-size: 128%;
     background-position: 0% 0%;
 
@@ -35,7 +33,6 @@
 
 .container {
   @media screen and (min-width: variables.$laptop) {
-    // display: flex;
     position: relative;
   }
 }
@@ -59,6 +56,15 @@
   overflow: hidden;
   border-radius: 12px;
 
+  animation: heroImg 500ms linear forwards;
+  opacity: 0;
+
+  @keyframes heroImg {
+    to {
+      opacity: 1;
+    }
+  }
+
   &:nth-child(1) {
     width: 33%;
     aspect-ratio: 1/1;
@@ -68,20 +74,19 @@
   &:nth-child(2) {
     width: 52%;
     aspect-ratio: 3/2;
-
     position: absolute;
-
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    animation-delay: 1s;
   }
 
   &:nth-child(3) {
     width: 33%;
     aspect-ratio: 1/1;
-
     margin-top: auto;
+    animation-delay: 500ms;
   }
 
   & img {
