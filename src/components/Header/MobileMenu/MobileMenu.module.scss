@@ -16,6 +16,11 @@
   flex-direction: column;
 
   overflow-x: hidden;
+
+  @media screen and (min-width: 500px) {
+    width: 80%;
+    max-width: 400px;
+  }
 }
 
 .mobMenuNone {
@@ -42,13 +47,8 @@
 }
 
 .navVisible {
-  animation: navVisible 1s linear forwards;
-}
-
-@keyframes navVisible {
-  to {
-    transform: translateX(0%);
-  }
+  transform: translateX(0%);
+  transition-duration: 1s;
 }
 
 .socLinks {
@@ -60,6 +60,16 @@
     width: 48px;
     height: 48px;
     transform: translateY(200%);
+
+    &:nth-child(2) {
+      transition-delay: 100ms;
+    }
+    &:nth-child(3) {
+      transition-delay: 200ms;
+    }
+    &:nth-child(4) {
+      transition-delay: 300ms;
+    }
   }
 
   & svg {
@@ -69,12 +79,6 @@
 
 .socLinksVisible {
   & a {
-    animation: socLinksVisible 1s linear 100ms forwards;
-  }
-}
-
-@keyframes socLinksVisible {
-  to {
     transform: translateY(0%);
   }
 }

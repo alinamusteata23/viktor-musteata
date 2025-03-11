@@ -7,29 +7,36 @@ import SocLinks from "@/components/SocLinks/SocLinks";
 import { SiteContext } from "@/context/SiteContext";
 
 const MobileMenu = () => {
-  const { mobileMenu, setMobileMenu } = useContext(SiteContext);
+  const { mobileMenu, setMobileMenu, mobileMenuContent, setmobileMenuContent } =
+    useContext(SiteContext);
 
   const handleClick = () => {
-    setMobileMenu(false);
+    if (mobileMenu) {
+      setmobileMenuContent(false);
+
+      setTimeout(() => {
+        setMobileMenu(false);
+      }, 500);
+    } else {
+      return;
+    }
   };
 
   return (
     <div className={mobileMenu ? `${styles.mobMenu}` : `${styles.mobMenuNone}`}>
       <Navigation
         className={
-          mobileMenu ? `${styles.nav} ${styles.navVisible}` : styles.nav
+          mobileMenuContent ? `${styles.nav} ${styles.navVisible}` : styles.nav
         }
         onClick={handleClick}
       />
-      {/* <SocLinks className={styles.socLinks} /> */}
 
       <SocLinks
         className={
-          mobileMenu
+          mobileMenuContent
             ? `${styles.socLinks} ${styles.socLinksVisible}`
             : styles.socLinks
         }
-        onClick={handleClick}
       />
     </div>
   );
