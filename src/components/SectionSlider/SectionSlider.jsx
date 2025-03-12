@@ -48,7 +48,7 @@ const SectionSlider = ({ data }) => {
           }}
           navigation={true}
           modules={[EffectCoverflow, Navigation]}
-          className="mySwiper"
+          className="Swiper"
         >
           {data.sliderImages.map(({ imgSrc, imgAlt, id }, index) => (
             <SwiperSlide key={id} className={styles.imgContainer}>
