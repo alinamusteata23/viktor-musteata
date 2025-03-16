@@ -31,6 +31,10 @@ body {
   color: variables.$textColor;
 }
 
+.stopBodyScroll {
+  overflow-y: hidden;
+}
+
 main {
   flex: 1;
 }
