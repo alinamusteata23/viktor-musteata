@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "./MobileMenu.module.scss";
 import Navigation from "@/components/Navigation/Navigation";
 import SocLinks from "@/components/SocLinks/SocLinks";
@@ -21,6 +21,16 @@ const MobileMenu = () => {
       return;
     }
   };
+
+  useEffect(() => {
+    if (window !== undefined && mobileMenu) {
+      document.body.classList.add("stopBodyScroll");
+    }
+
+    return () => {
+      document.body.classList.remove("stopBodyScroll");
+    };
+  }, [window, mobileMenu]);
 
   return (
     <div className={mobileMenu ? `${styles.mobMenu}` : `${styles.mobMenuNone}`}>

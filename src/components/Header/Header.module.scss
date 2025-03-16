@@ -6,14 +6,15 @@
   position: fixed;
   z-index: 100;
 
-  background-image: linear-gradient(
-    variables.$bodyColor 50%,
-    transparent 80%,
-    transparent 100%
-  );
+  background-image: linear-gradient(variables.$bodyColor 64%, transparent 100%);
 
   @media screen and (min-width: variables.$laptop) {
+    background-image: linear-gradient(
+      variables.$bodyColor 48%,
+      transparent 100%
+    );
     padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 
