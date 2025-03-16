@@ -19,6 +19,11 @@
   background-color: #ffffff;
 }
 
+.mySwiper .swiper-slide-next,
+.mySwiper .swiper-slide-prev {
+  visibility: hidden;
+}
+
 .mySwiper .swiper-button-prev,
 .mySwiper .swiper-button-next {
   color: transparent;
@@ -55,6 +60,11 @@
   .mySwiper .swiper-slide {
     height: 317px;
   }
+
+  .mySwiper .swiper-button-prev,
+  .mySwiper .swiper-slide-next {
+    visibility: visible;
+  }
 }
 
 @media screen and (min-width: 1366px) {
@@ -67,5 +77,17 @@
   }
   .mySwiper .swiper-slide {
     height: 487px;
+  }
+
+  /* .mySwiper .swiper-slide-ative:nth-child(3n) {
+    visibility: hidden;
+  } */
+
+  .hidden-slide {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+    transform: scale(0.8) !important; /* Для м'якшої анімації */
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
   }
 }

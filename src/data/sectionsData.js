@@ -82,16 +82,6 @@ export const sectionsData = [
         imgSrc: '/imgs/BödenVerlegen/BödenVerlegen-3.webp',
         imgAlt: 'Böden verlegen',
       },
-      {
-        id: v4(),
-        imgSrc: '/imgs/BödenVerlegen/BödenVerlegen-3.webp',
-        imgAlt: 'Böden verlegen',
-      },
-      {
-        id: v4(),
-        imgSrc: '/imgs/BödenVerlegen/BödenVerlegen-3.webp',
-        imgAlt: 'Böden verlegen',
-      },
     ],
   },
 
