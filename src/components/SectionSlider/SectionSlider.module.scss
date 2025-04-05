@@ -1,8 +1,14 @@
 @use '../../app/variables';
 
-.container {
+.loaderWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 319px;
   @media screen and (min-width: variables.$tablet) {
+    height: 252px;
   }
   @media screen and (min-width: variables.$laptop) {
+    height: 563px;
   }
 }

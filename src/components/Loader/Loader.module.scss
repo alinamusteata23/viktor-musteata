@@ -1,0 +1,25 @@
+@use '../../app/variables';
+
+.loader {
+  font-size: 16px;
+  color: variables.$textColor;
+  animation: pulse 1.5s infinite;
+  @media screen and (min-width: variables.$tablet) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: variables.$laptop) {
+    font-size: 32px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}

@@ -1,18 +1,20 @@
 .mySwiper.swiper {
   width: 100%;
-  height: 292px;
-  padding: 0px 40px;
+  height: 272px;
+  display: flex;
+  align-items: center;
+  padding: 0px 12px;
 }
 
 .mySwiper.swiper .swiper-wrapper {
-  height: 272px;
+  height: 252px;
 }
 
 .mySwiper .swiper-slide {
   background-position: center;
   background-size: cover;
   border-radius: 24px;
-  height: 272px;
+  height: 252px;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 3px 4px 13px 0 rgba(0, 0, 0, 0.16);
@@ -27,6 +29,14 @@
 .mySwiper .swiper-button-prev,
 .mySwiper .swiper-button-next {
   color: transparent;
+}
+
+.swiper-button-prev {
+  left: -10px;
+}
+
+.swiper-button-next {
+  right: -10px;
 }
 
 .mySwiper .swiper-button-next::after {
@@ -49,16 +59,17 @@
   border-right: 9px solid #272727;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 743px) {
   .mySwiper.swiper {
-    height: 337px;
+    height: 507px;
+    padding: 0px 24px;
   }
 
   .mySwiper.swiper .swiper-wrapper {
-    height: 317px;
+    height: 487px;
   }
   .mySwiper .swiper-slide {
-    height: 317px;
+    height: 487px;
   }
 
   .mySwiper .swiper-button-prev,
@@ -67,27 +78,16 @@
   }
 }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1280px) {
   .mySwiper.swiper {
-    height: 507px;
+    padding: 0px 32px;
   }
 
-  .mySwiper.swiper .swiper-wrapper {
-    height: 487px;
-  }
-  .mySwiper .swiper-slide {
-    height: 487px;
+  .swiper-button-prev {
+    left: -10px;
   }
 
-  /* .mySwiper .swiper-slide-ative:nth-child(3n) {
-    visibility: hidden;
-  } */
-
-  .hidden-slide {
-    opacity: 0 !important;
-    pointer-events: none !important;
-    visibility: hidden !important;
-    transform: scale(0.8) !important; /* Для м'якшої анімації */
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  .swiper-button-next {
+    right: -10px;
   }
 }
