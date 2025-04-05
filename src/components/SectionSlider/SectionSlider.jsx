@@ -14,11 +14,24 @@ import './SectionSlider.css';
 import { Navigation, EffectCoverflow } from 'swiper/modules';
 
 import styles from './SectionSlider.module.scss';
+import { useEffect, useState } from 'react';
+import Loader from '../Loader/Loader';
 
 const SectionSlider = ({ data }) => {
+  const [isLoad, setIsLoad] = useState(true);
+
+  useEffect(() => {
+    setIsLoad(false);
+  }, []);
+
   return (
     <>
-      {data && (
+      {isLoad && (
+        <div className={styles.loaderWrapper}>
+          <Loader />
+        </div>
+      )}
+      {!isLoad && data && (
         <Swiper
           effect={'coverflow'}
           grabCursor={true}
@@ -29,8 +42,8 @@ const SectionSlider = ({ data }) => {
               slidesPerView: 1,
               spaceBetween: 40,
             },
-            768: {
-              slidesPerView: 2,
+            743: {
+              slidesPerView: 3,
               spaceBetween: 40,
             },
             1024: {
@@ -48,7 +61,7 @@ const SectionSlider = ({ data }) => {
           }}
           navigation={true}
           modules={[EffectCoverflow, Navigation]}
-          className="Swiper"
+          className={`Swiper`}
         >
           {data.sliderImages.map(({ imgSrc, imgAlt, id }, index) => (
             <SwiperSlide key={id} className={styles.imgContainer}>

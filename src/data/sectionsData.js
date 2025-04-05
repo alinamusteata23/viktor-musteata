@@ -150,7 +150,7 @@ export const sectionsData = [
       {
         id: v4(),
         author: 'Wade Warren',
-        rating: 4.0,
+        rating: 3.5,
         comment: 'Awesome website and funnel for your business',
       },
       {

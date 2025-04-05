@@ -1,5 +1,11 @@
 @use '../../app/variables';
 
+.container {
+  @media screen and (min-width: variables.$tablet) {
+    padding: 0 24px;
+  }
+}
+
 .slide {
   display: flex;
   flex-direction: column;
@@ -8,79 +14,83 @@
   row-gap: 20px;
   padding: 0 32px;
   @media screen and (min-width: variables.$tablet) {
-    row-gap: 32px;
+    row-gap: 64px;
+    padding: 0 64px;
   }
   @media screen and (min-width: variables.$laptop) {
-    row-gap: 64px;
     padding: 0 45px;
   }
 }
 
-.title {
-  font-family: 'KoHo', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-  color: #646464;
-  @media screen and (min-width: variables.$tablet) {
-  }
-  @media screen and (min-width: variables.$laptop) {
-    font-size: 32px;
-    line-height: 0.9375;
-  }
-}
+// .title {
+//   font-family: 'KoHo', sans-serif;
+//   font-weight: 700;
+//   font-size: 16px;
+//   line-height: 1.875;
+//   color: #646464;
+//   @media screen and (min-width: variables.$tablet) {
+//     font-size: 32px;
+//     line-height: 0.9375;
+//   }
+// }
 
-.ratingContainer {
+// .ratingContainer {
+//   display: flex;
+//   align-items: center;
+//   column-gap: 4px;
+//   @media screen and (min-width: variables.$tablet) {
+//     column-gap: 10px;
+//   }
+// }
+
+// .svgContainer {
+//   position: relative;
+//   width: 19px;
+//   height: 19px;
+//   & img {
+//     object-fit: cover;
+//   }
+//   @media screen and (min-width: variables.$tablet) {
+//     width: 24px;
+//     height: 24px;
+//   }
+//   @media screen and (min-width: variables.$laptop) {
+//     width: 35px;
+//     height: 35px;
+//   }
+// }
+
+// .rating {
+//   font-family: 'KoHo', sans-serif;
+//   font-weight: 700;
+//   font-size: 24px;
+//   line-height: 0.92508;
+//   color: #1e1e1e;
+//   @media screen and (min-width: variables.$tablet) {
+//     font-size: 32px;
+//     line-height: 0.69381;
+//   }
+// }
+
+// .comment {
+//   font-family: 'Manrope', sans-serif;
+//   font-weight: 400;
+//   font-size: 16px;
+//   line-height: 1.6875;
+//   text-align: center;
+//   color: #8c8c8c;
+//   @media screen and (min-width: variables.$tablet) {
+//     font-size: 24px;
+//     line-height: 1.125;
+//   }
+// }
+
+.loaderWrapper {
   display: flex;
+  justify-content: center;
   align-items: center;
-  column-gap: 4px;
+  height: 272px;
   @media screen and (min-width: variables.$tablet) {
-    column-gap: 10px;
-  }
-}
-
-.svgContainer {
-  position: relative;
-  width: 19px;
-  height: 19px;
-  & img {
-    object-fit: cover;
-  }
-  @media screen and (min-width: variables.$tablet) {
-    width: 24px;
-    height: 24px;
-  }
-  @media screen and (min-width: variables.$laptop) {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-.rating {
-  font-family: 'KoHo', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 0.92508;
-  color: #1e1e1e;
-  @media screen and (min-width: variables.$tablet) {
-  }
-  @media screen and (min-width: variables.$laptop) {
-    font-size: 32px;
-    line-height: 0.69381;
-  }
-}
-
-.comment {
-  font-family: 'Manrope', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.6875;
-  text-align: center;
-  color: #8c8c8c;
-  @media screen and (min-width: variables.$tablet) {
-  }
-  @media screen and (min-width: variables.$laptop) {
-    font-size: 24px;
-    line-height: 1.125;
+    height: 507px;
   }
 }

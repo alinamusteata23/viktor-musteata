@@ -1,0 +1,81 @@
+@use '../../app/variables';
+
+.title {
+  font-family: 'KoHo', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  color: #646464;
+  @media screen and (min-width: variables.$tablet) {
+    font-size: 32px;
+    line-height: 0.9375;
+  }
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  @media screen and (min-width: variables.$tablet) {
+    column-gap: 10px;
+  }
+}
+.svgContainer {
+  width: 19px;
+  height: 19px;
+  stroke: variables.$foterLogoColor;
+  @media screen and (min-width: variables.$tablet) {
+    width: 24px;
+    height: 24px;
+  }
+  @media screen and (min-width: variables.$laptop) {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.star {
+  fill: variables.$foterLogoColor;
+}
+
+.starHalf {
+  position: relative;
+}
+
+.starStrokeTop {
+  fill: none;
+  stroke: variables.$foterLogoColor;
+  stroke-width: 1.5;
+  clip-path: inset(0 0 0 50%);
+}
+
+.starFillHalf {
+  fill: variables.$foterLogoColor;
+  stroke: variables.$foterLogoColor;
+  clip-path: inset(0 50% 0 0);
+}
+
+.rating {
+  font-family: 'KoHo', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 0.92508;
+  color: #1e1e1e;
+  @media screen and (min-width: variables.$tablet) {
+    font-size: 32px;
+    line-height: 0.69381;
+  }
+}
+
+.comment {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6875;
+  text-align: center;
+  color: #8c8c8c;
+  @media screen and (min-width: variables.$tablet) {
+    font-size: 24px;
+    line-height: 1.125;
+  }
+}
