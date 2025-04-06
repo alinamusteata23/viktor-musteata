@@ -1,6 +1,6 @@
 .mySwiper.swiper {
   width: 100%;
-  height: 272px;
+  height: 282px;
   display: flex;
   align-items: center;
   padding: 0px 12px;
@@ -61,7 +61,7 @@
 
 @media screen and (min-width: 743px) {
   .mySwiper.swiper {
-    height: 507px;
+    height: 517px;
     padding: 0px 24px;
   }
 

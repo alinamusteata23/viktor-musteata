@@ -14,14 +14,11 @@ const TestimonialsSlideItem = ({
       <h3 className={styles.title}>{author}</h3>
 
       <div className={styles.ratingContainer}>
-        {/* Повні зірки */}
         {Array.from({ length: fullStars }).map((_, index) => (
           <svg key={index} className={styles.svgContainer + ' ' + styles.star}>
             <use href="/sprite.svg#icon-Star" />
           </svg>
         ))}
-
-        {/* Напівзірка */}
         {hasHalfStar && (
           <svg className={styles.svgContainer + ' ' + styles.starHalf}>
             <use

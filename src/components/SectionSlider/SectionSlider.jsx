@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -13,9 +14,9 @@ import './SectionSlider.css';
 // import required modules
 import { Navigation, EffectCoverflow } from 'swiper/modules';
 
-import styles from './SectionSlider.module.scss';
-import { useEffect, useState } from 'react';
 import Loader from '../Loader/Loader';
+
+import styles from './SectionSlider.module.scss';
 
 const SectionSlider = ({ data }) => {
   const [isLoad, setIsLoad] = useState(true);
@@ -70,6 +71,7 @@ const SectionSlider = ({ data }) => {
                 alt={imgAlt}
                 fill={true}
                 sizes="(max-width: 320px) 214px (max-width: 320px) 422px"
+                loading="lazy"
               />
             </SwiperSlide>
           ))}
