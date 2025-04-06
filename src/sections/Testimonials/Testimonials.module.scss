@@ -7,9 +7,18 @@
 }
 
 .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   row-gap: 20px;
   padding: 0 32px;
@@ -22,75 +31,18 @@
   }
 }
 
-// .title {
-//   font-family: 'KoHo', sans-serif;
-//   font-weight: 700;
-//   font-size: 16px;
-//   line-height: 1.875;
-//   color: #646464;
-//   @media screen and (min-width: variables.$tablet) {
-//     font-size: 32px;
-//     line-height: 0.9375;
-//   }
-// }
-
-// .ratingContainer {
-//   display: flex;
-//   align-items: center;
-//   column-gap: 4px;
-//   @media screen and (min-width: variables.$tablet) {
-//     column-gap: 10px;
-//   }
-// }
-
-// .svgContainer {
-//   position: relative;
-//   width: 19px;
-//   height: 19px;
-//   & img {
-//     object-fit: cover;
-//   }
-//   @media screen and (min-width: variables.$tablet) {
-//     width: 24px;
-//     height: 24px;
-//   }
-//   @media screen and (min-width: variables.$laptop) {
-//     width: 35px;
-//     height: 35px;
-//   }
-// }
-
-// .rating {
-//   font-family: 'KoHo', sans-serif;
-//   font-weight: 700;
-//   font-size: 24px;
-//   line-height: 0.92508;
-//   color: #1e1e1e;
-//   @media screen and (min-width: variables.$tablet) {
-//     font-size: 32px;
-//     line-height: 0.69381;
-//   }
-// }
-
-// .comment {
-//   font-family: 'Manrope', sans-serif;
-//   font-weight: 400;
-//   font-size: 16px;
-//   line-height: 1.6875;
-//   text-align: center;
-//   color: #8c8c8c;
-//   @media screen and (min-width: variables.$tablet) {
-//     font-size: 24px;
-//     line-height: 1.125;
-//   }
-// }
-
 .loaderWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  height: 272px;
+  height: 282px;
   @media screen and (min-width: variables.$tablet) {
-    height: 507px;
+    height: 517px;
   }
 }

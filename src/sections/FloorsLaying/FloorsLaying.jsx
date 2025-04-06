@@ -2,8 +2,9 @@ import React from 'react';
 import DescriptionComponent from '@/components/DescriptionComponent/DescriptionComponent';
 import { sectionsData } from '@/data/sectionsData';
 import CallBtn from '@/components/buttons/CallBtn/CallBtn';
-import styles from './FloorsLaying.module.scss';
 import SectionSlider from '@/components/SectionSlider/SectionSlider';
+
+import styles from './FloorsLaying.module.scss';
 
 const FloorsLaying = () => {
   const floorLayingData = sectionsData.find(

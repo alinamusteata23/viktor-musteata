@@ -5,14 +5,15 @@ const DescriptionComponent = ({ data }) => {
   return (
     <div key={data.name} className={styles.descriptionComponent}>
       <h3 className={styles.title}>{data.title}</h3>
-      <div className={styles.imgContainer}>
+      <figure className={styles.imgContainer}>
         <Image
           src={data.imgSrc}
           alt={data.imgAlt}
           fill={true}
           sizes="(max-width: 320px) 30vw"
+          loading="lazy"
         />
-      </div>
+      </figure>
       <p className={styles.description}>{data.text}</p>
     </div>
   );
