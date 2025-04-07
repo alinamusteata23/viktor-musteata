@@ -26,6 +26,10 @@ $crossColor: #646464;
 
 @mixin textSize {
   font-size: 16px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
   @media screen and (min-width: $laptop) {
     font-size: 32px;
   }
@@ -33,3 +37,14 @@ $crossColor: #646464;
 
 //usage example
 //  @include variables.textSize;
+
+@mixin onLoadAnimation {
+  animation: onLoadAnimation 800ms ease-in 10ms forwards;
+  opacity: 0;
+}
+
+@keyframes onLoadAnimation {
+  to {
+    opacity: 1;
+  }
+}

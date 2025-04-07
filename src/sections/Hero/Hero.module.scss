@@ -3,7 +3,7 @@
 .section {
   background-repeat: no-repeat;
 
-  @media screen and (orientation: portrait) {
+  @media screen and (orientation: portrait) and (max-width: 743px) {
     background-image: url("../../../public/imgs/heroMobile.webp");
     background-size: 128%;
     background-position: 0% 0%;
@@ -11,7 +11,8 @@
     padding-top: 18%;
   }
 
-  @media screen and (orientation: landscape) {
+  @media screen and (orientation: landscape),
+    screen and (min-width: variables.$tablet) {
     padding-top: 100px;
 
     position: relative;
@@ -21,18 +22,33 @@
       position: absolute;
       top: 0;
       left: 0;
+
+      left: 50%;
+      transform: translateX(-50%);
+
       width: 100%;
-      height: 110%;
+      max-width: 1400px;
+
+      height: 120%;
       background-image: url("../../../public/imgs/heroLaptop.webp");
       background-size: cover;
       background-position: 72% -20px;
       z-index: -1;
+
+      opacity: 0;
+      animation: bgAnimation 1s linear forwards;
     }
   }
 }
 
+@keyframes bgAnimation {
+  to {
+    opacity: 1;
+  }
+}
+
 .container {
-  @media screen and (min-width: variables.$laptop) {
+  @media screen and (min-width: variables.$tablet) {
     position: relative;
   }
 }
@@ -45,9 +61,14 @@
 
   position: relative;
 
+  @media screen and (min-width: variables.$tablet) {
+    width: 62%;
+    aspect-ratio: 507/340;
+  }
+
   @media screen and (min-width: variables.$laptop) {
-    width: 760px;
-    height: 648px;
+    width: 72%;
+    aspect-ratio: 507/384;
   }
 }
 
@@ -55,20 +76,13 @@
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-
-  animation: heroImg 500ms linear forwards;
-  opacity: 0;
-
-  @keyframes heroImg {
-    to {
-      opacity: 1;
-    }
-  }
+  @include variables.onLoadAnimation;
 
   &:nth-child(1) {
     width: 33%;
     aspect-ratio: 1/1;
     margin-bottom: auto;
+    animation-delay: 100ms;
   }
 
   &:nth-child(2) {
@@ -79,14 +93,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    animation-delay: 1s;
+    animation-delay: 1100ms;
   }
 
   &:nth-child(3) {
     width: 33%;
     aspect-ratio: 1/1;
     margin-top: auto;
-    animation-delay: 500ms;
+    animation-delay: 600ms;
   }
 
   & img {
@@ -111,18 +125,32 @@
     margin-bottom: 16px;
   }
 
-  @media screen and (min-width: variables.$laptop) {
+  @media screen and (min-width: variables.$tablet) {
     position: absolute;
     right: 0;
     top: 0;
-    width: 644px;
-    // height: 332px;
-
-    justify-content: space-between;
+    width: 483px;
 
     & h1,
     & h2 {
       text-align: right;
+      font-size: 24px;
+    }
+
+    & h1 {
+      margin-bottom: 32px;
+    }
+
+    & h2 {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (min-width: variables.$laptop) {
+    width: 644px;
+
+    & h1,
+    & h2 {
       font-size: 32px;
     }
 
@@ -137,9 +165,16 @@
 }
 
 #callBtn {
+  @include variables.onLoadAnimation;
+
+  @media screen and (min-width: variables.$tablet) {
+    width: 210px;
+    height: 46px;
+    margin-left: auto;
+  }
+
   @media screen and (min-width: variables.$laptop) {
     width: 252px;
     height: 64px;
-    margin-left: auto;
   }
 }

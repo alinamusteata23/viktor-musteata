@@ -12,20 +12,22 @@
 }
 
 .container {
-  margin: 32px 24px;
+  margin: 32px auto;
   display: flex;
   flex-direction: column;
   gap: 48px;
 
   @media screen and (min-width: variables.$tablet) {
+    margin: 52px auto;
+
     flex-direction: row;
     justify-content: space-between;
+    width: 80%;
+    max-width: 956px;
   }
 
   @media screen and (min-width: variables.$laptop) {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 956px;
+    margin: 40px auto;
   }
 }
 
@@ -45,6 +47,11 @@
 
   @media screen and (min-width: variables.$tablet) {
     align-items: flex-start;
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: variables.$laptop) {
+    font-size: 20px;
   }
 }
 
@@ -55,6 +62,10 @@
   &:focus {
     font-weight: 900;
     text-shadow: 0px 0px 0.5px rgba(0, 0, 0, 0.8);
+  }
+
+  @media screen and (min-width: variables.$tablet) {
+    font-size: 24px;
   }
 }
 
@@ -127,6 +138,8 @@
   font-family: Montserrat;
   font-weight: 500;
 
+  @include variables.onLoadAnimation;
+
   & a {
     color: variables.$foterLogoColor;
 
@@ -134,5 +147,12 @@
     &:focus {
       text-shadow: 0px 0px 0.5px rgba(255, 255, 255, 0.8);
     }
+  }
+
+  @media screen and (min-width: variables.$tablet) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: variables.$laptop) {
+    margin-bottom: 40px;
   }
 }

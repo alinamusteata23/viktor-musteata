@@ -3,6 +3,7 @@
 .socLink {
   border-radius: 50%;
   overflow: hidden;
+  @include variables.onLoadAnimation;
 
   &:hover,
   &:focus {
