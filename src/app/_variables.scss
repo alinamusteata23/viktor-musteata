@@ -1,8 +1,9 @@
 //variables
 
-$mobile: '320px';
-$tablet: '743px';
-$laptop: '1280px';
+$mobile: "320px";
+// $tablet: '743px';
+$tablet: "744px";
+$laptop: "1280px";
 // $desktop: "1440px";
 
 // @media screen and (min-width: variables.$mobile)
@@ -19,6 +20,8 @@ $hoverBrightnes: brightness(1.3);
 $footerBg: #192b39;
 $foterLogoColor: #ff8a00;
 $faqItemBorderColor: #d9dbe9;
+$faqQuestionColor: #585858;
+$faqAnswerColor: #8c8c8c;
 $crossColor: #646464;
 
 @mixin textSize {

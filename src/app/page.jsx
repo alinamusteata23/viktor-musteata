@@ -10,7 +10,7 @@ import Hero from "@/sections/Hero/Hero";
 import PaintingWorks from "@/sections/PaintingWorks/PaintingWorks";
 import Testimonials from "@/sections/Testimonials/Testimonials";
 import Tiling from "@/sections/Tiling/Tiling";
-import WhyUs from "@/sections/WhyUs/WhyUs";
+// import WhyUs from "@/sections/WhyUs/WhyUs";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       <AboutUs />
       <Tiling />
       <FloorsLaying />
-      <WhyUs />
+      {/* <WhyUs /> */}
       <PaintingWorks />
       <FacadesRepair />
       <ConcreteWorks />
