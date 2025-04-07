@@ -6,7 +6,7 @@ const AboutUs = () => {
   const data = sectionsData.find((section) => section.name === "AboutUs");
 
   return (
-    <section id="AboutUs">
+    <section className="section" id="AboutUs">
       <div className={`container ${styles.container}`}>
         <h2 className={styles.title}>{data?.title}</h2>
         <div className={styles.infoWrapper}>

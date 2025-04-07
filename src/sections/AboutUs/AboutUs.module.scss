@@ -5,6 +5,10 @@
   flex-direction: column;
   row-gap: 24px;
 
+  @media screen and (min-width: variables.$tablet) {
+    row-gap: 32px;
+  }
+
   @media screen and (min-width: variables.$laptop) {
     row-gap: 64px;
   }
@@ -15,8 +19,12 @@
   font-size: 32px;
   line-height: 1.3;
 
-  @media screen and (min-width: variables.$laptop) {
+  @media screen and (min-width: variables.$tablet) {
     font-weight: 600;
+    font-size: 40px;
+  }
+
+  @media screen and (min-width: variables.$laptop) {
     font-size: 48px;
   }
 }
@@ -36,6 +44,11 @@
 .img {
   margin: 0 auto;
 
+  @media screen and (min-width: variables.$tablet) {
+    width: 300px;
+    height: 368px;
+  }
+
   @media screen and (min-width: variables.$laptop) {
     margin: 0;
     width: 480px;
@@ -48,6 +61,10 @@
   font-size: 16px;
   line-height: 1.3;
 
+  @media screen and (min-width: variables.$tablet) {
+    font-size: 24px;
+  }
+
   @media screen and (min-width: variables.$laptop) {
     font-size: 32px;
   }
@@ -57,6 +74,12 @@
   display: flex;
   justify-content: center;
   column-gap: 6px;
+  margin: 0px -12px;
+
+  @media screen and (min-width: variables.$tablet) {
+    column-gap: 24px;
+    margin: 0px;
+  }
 
   @media screen and (min-width: variables.$laptop) {
     column-gap: 20px;
@@ -67,9 +90,52 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8px 16px;
+  // padding: 8px 16px;
   border-radius: 24px;
   border: 1px solid variables.$borderColor;
+
+  // @media screen and (min-width: variables.$tablet) {
+  //   padding: 26px 24px;
+  // }
+
+  // @media screen and (min-width: variables.$laptop) {
+  //   row-gap: 16px;
+  //   padding: 26px 48px;
+  // }
+}
+
+.dataItem:nth-child(1) {
+  padding: 8px 22px;
+
+  @media screen and (min-width: variables.$tablet) {
+    padding: 26px 24px;
+  }
+
+  @media screen and (min-width: variables.$laptop) {
+    row-gap: 16px;
+    padding: 26px 48px;
+  }
+}
+
+.dataItem:nth-child(2) {
+  padding: 8px 10px;
+
+  @media screen and (min-width: variables.$tablet) {
+    padding: 0px 32px 24px;
+  }
+
+  @media screen and (min-width: variables.$laptop) {
+    row-gap: 16px;
+    padding: 26px 48px;
+  }
+}
+
+.dataItem:nth-child(3) {
+  padding: 8px 22px;
+
+  @media screen and (min-width: variables.$tablet) {
+    padding: 26px 24px;
+  }
 
   @media screen and (min-width: variables.$laptop) {
     row-gap: 16px;
@@ -82,6 +148,10 @@
   font-size: 16px;
   line-height: 1.3;
 
+  @media screen and (min-width: variables.$tablet) {
+    font-size: 48px;
+  }
+
   @media screen and (min-width: variables.$laptop) {
     font-size: 96px;
   }
@@ -92,7 +162,22 @@
   font-size: 12px;
   line-height: 1.3;
 
+  @media screen and (min-width: variables.$tablet) {
+    font-size: 24px;
+  }
+
   @media screen and (min-width: variables.$laptop) {
     font-size: 36px;
+  }
+}
+
+.dataItem:nth-child(2) .dataText {
+  @media screen and (min-width: variables.$tablet) {
+    width: 159px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: variables.$laptop) {
+    width: auto;
   }
 }
