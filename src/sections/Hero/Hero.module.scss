@@ -76,20 +76,13 @@
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-
-  animation: heroImg 500ms linear forwards;
-  opacity: 0;
-
-  @keyframes heroImg {
-    to {
-      opacity: 1;
-    }
-  }
+  @include variables.onLoadAnimation;
 
   &:nth-child(1) {
     width: 33%;
     aspect-ratio: 1/1;
     margin-bottom: auto;
+    animation-delay: 100ms;
   }
 
   &:nth-child(2) {
@@ -100,14 +93,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    animation-delay: 1s;
+    animation-delay: 1100ms;
   }
 
   &:nth-child(3) {
     width: 33%;
     aspect-ratio: 1/1;
     margin-top: auto;
-    animation-delay: 500ms;
+    animation-delay: 600ms;
   }
 
   & img {
@@ -172,6 +165,8 @@
 }
 
 #callBtn {
+  @include variables.onLoadAnimation;
+
   @media screen and (min-width: variables.$tablet) {
     width: 210px;
     height: 46px;
