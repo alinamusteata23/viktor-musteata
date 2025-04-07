@@ -1,7 +1,12 @@
 @use '../../app/variables';
 
 .descriptionComponent {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   row-gap: 23px;
   @media screen and (min-width: variables.$tablet) {
@@ -35,6 +40,7 @@
   height: 28vw;
   & img {
     object-fit: cover;
+    -o-object-fit: cover;
     border-radius: 24px;
   }
 }

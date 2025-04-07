@@ -2,8 +2,9 @@ import React from 'react';
 import CallBtn from '@/components/buttons/CallBtn/CallBtn';
 import DescriptionComponent from '@/components/DescriptionComponent/DescriptionComponent';
 import { sectionsData } from '@/data/sectionsData';
-import styles from './ConcreteWorks.module.scss';
 import SectionSlider from '@/components/SectionSlider/SectionSlider';
+
+import styles from './ConcreteWorks.module.scss';
 
 const ConcreteWorks = () => {
   const floorLayingData = sectionsData.find(

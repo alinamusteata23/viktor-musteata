@@ -5,7 +5,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  color: #646464;
+  color: variables.$crossColor;
   @media screen and (min-width: variables.$tablet) {
     font-size: 32px;
     line-height: 0.9375;
@@ -13,7 +13,11 @@
 }
 
 .ratingContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   column-gap: 4px;
   @media screen and (min-width: variables.$tablet) {
