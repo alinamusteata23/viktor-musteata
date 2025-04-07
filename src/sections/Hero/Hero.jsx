@@ -5,7 +5,7 @@ import CallBtn from "@/components/buttons/CallBtn/CallBtn";
 
 const Hero = () => {
   return (
-    <section id="hero" className={styles.section}>
+    <section id="hero" className={`section ${styles.section}`}>
       <div className={`container ${styles.container}`}>
         <ul className={styles.imgs}>
           <li className={styles.heroImg}>
