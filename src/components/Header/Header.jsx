@@ -22,7 +22,11 @@ const Header = () => {
         {isMobile || isTablet ? (
           <BurgerBtn />
         ) : (
-          <Navigation className={styles.navigation} />
+          <Navigation
+            className={styles.navigation}
+            activeLink={styles.activeLink}
+            hoverLink={styles.hoverLink}
+          />
         )}
 
         {(isMobile || isTablet) && <MobileMenu />}

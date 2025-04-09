@@ -1,9 +1,20 @@
-import React from "react";
+"use client";
+
+import React, { useContext } from "react";
 import styles from "./Logo.module.scss";
+import { SiteContext } from "@/context/SiteContext";
 
 const Logo = ({ className }) => {
+  const { setCurrentHash } = useContext(SiteContext);
+
   return (
-    <a href="tel:+491701251314" className={`${styles.logo} ${className}`}>
+    <a
+      href="/"
+      className={`${styles.logo} ${className}`}
+      onClick={() => {
+        setCurrentHash("");
+      }}
+    >
       Viktor Musteata
     </a>
   );

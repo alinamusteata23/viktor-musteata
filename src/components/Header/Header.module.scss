@@ -42,15 +42,15 @@
 .navigation {
   display: none;
 
-  & a:hover,
-  & a:focus {
-    text-shadow: 0px 0px 0.5px black;
-  }
   @media screen and (min-width: variables.$laptop) {
     display: flex;
     gap: 16px;
     font-size: 16px;
   }
+}
+
+.activeLink {
+  text-shadow: 0px 0px 0.5px black;
 }
 
 .tabletSocLinks {
@@ -59,9 +59,6 @@
   @media screen and (min-width: variables.$tablet) and (max-width: 1279px) {
     display: flex;
     gap: 16px;
-
-    // margin-left: auto;
-    // margin-right: 40px;
 
     & a {
       width: 24px;
