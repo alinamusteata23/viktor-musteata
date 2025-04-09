@@ -17,7 +17,6 @@ const Hero = () => {
             />
           </li>
           <li className={styles.heroImg}>
-            {/* sizes="(max-width: 768px) 30vw, 33vw" */}
             <Image
               src="/imgs/heroimg-2.jpg"
               alt="heroImg-2"
