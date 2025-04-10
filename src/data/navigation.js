@@ -25,7 +25,7 @@ export const navigation = [
   },
 
   {
-    id: "FloorsLaying",
+    id: "Contacts",
     title: "Rückmeldung",
   },
 ];

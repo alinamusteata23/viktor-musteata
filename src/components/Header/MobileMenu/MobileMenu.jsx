@@ -5,10 +5,12 @@ import styles from "./MobileMenu.module.scss";
 import Navigation from "@/components/Navigation/Navigation";
 import SocLinks from "@/components/SocLinks/SocLinks";
 import { SiteContext } from "@/context/SiteContext";
+import { useWindowResize } from "@/hooks/windowResize";
 
 const MobileMenu = () => {
   const { mobileMenu, setMobileMenu, mobileMenuContent, setmobileMenuContent } =
     useContext(SiteContext);
+  const { isMobile } = useWindowResize();
 
   const handleClick = () => {
     if (mobileMenu) {
@@ -41,13 +43,15 @@ const MobileMenu = () => {
         onClick={handleClick}
       />
 
-      <SocLinks
-        className={
-          mobileMenuContent
-            ? `${styles.socLinks} ${styles.socLinksVisible}`
-            : styles.socLinks
-        }
-      />
+      {isMobile && (
+        <SocLinks
+          className={
+            mobileMenuContent
+              ? `${styles.socLinks} ${styles.socLinksVisible}`
+              : styles.socLinks
+          }
+        />
+      )}
     </div>
   );
 };

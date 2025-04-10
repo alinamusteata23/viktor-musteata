@@ -7,24 +7,27 @@ import BurgerBtn from "../buttons/BurgerBtn/BurgerBtn";
 import { useWindowResize } from "@/hooks/windowResize";
 import MobileMenu from "./MobileMenu/MobileMenu";
 import Navigation from "../Navigation/Navigation";
-import { SiteContext } from "@/context/SiteContext";
 import SocLinks from "../SocLinks/SocLinks";
 
 const Header = () => {
   const { isMobile, isTablet, isLaptop, isDesktop } = useWindowResize();
 
-  // const { mobileMenu } = useContext(SiteContext);
-
   return (
     <header className={styles.header}>
       <div className={`container ${styles.container}`}>
         <Logo className={styles.logo} />
+
+        {isTablet && <SocLinks className={styles.tabletSocLinks} />}
+
         {isMobile || isTablet ? (
           <BurgerBtn />
         ) : (
-          <Navigation className={styles.navigation} />
+          <Navigation
+            className={styles.navigation}
+            activeLink={styles.activeLink}
+            hoverLink={styles.hoverLink}
+          />
         )}
-        {/* {mobileMenu && <MobileMenu />} */}
 
         {(isMobile || isTablet) && <MobileMenu />}
       </div>
@@ -37,4 +40,3 @@ const Header = () => {
 };
 
 export default Header;
-// fill="#ff8a00" style="fill: var(--color1, #ff8a00)"

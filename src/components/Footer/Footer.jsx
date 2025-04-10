@@ -6,7 +6,7 @@ import Navigation from "../Navigation/Navigation";
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="Contacts">
       <div className={`container ${styles.container}`}>
         <address className={styles.contentWrapp}>
           <Logo className={styles.logo} />

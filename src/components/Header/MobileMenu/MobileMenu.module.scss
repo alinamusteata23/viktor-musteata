@@ -6,7 +6,7 @@
   height: 100vh;
   padding: 20px 20px 40px;
   top: 0;
-  left: 0;
+  right: 0;
   padding-top: 100px;
   z-index: -1;
 
@@ -16,6 +16,9 @@
   flex-direction: column;
 
   overflow-x: hidden;
+
+  @include variables.onLoadAnimation;
+  animation-delay: 100ms;
 
   @media screen and (min-width: 500px) {
     width: 80%;
@@ -77,6 +80,10 @@
 
   & svg {
     fill: variables.$accentColor;
+  }
+
+  @media screen and (min-width: variables.$tablet) {
+    display: none;
   }
 }
 

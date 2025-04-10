@@ -42,14 +42,32 @@
 .navigation {
   display: none;
 
-  & a:hover,
-  & a:focus {
-    text-shadow: 0px 0px 0.5px black;
-  }
   @media screen and (min-width: variables.$laptop) {
     display: flex;
     gap: 16px;
     font-size: 16px;
+  }
+}
+
+.activeLink {
+  text-shadow: 0px 0px 0.5px black;
+}
+
+.tabletSocLinks {
+  display: none;
+
+  @media screen and (min-width: variables.$tablet) and (max-width: 1279px) {
+    display: flex;
+    gap: 16px;
+
+    & a {
+      width: 24px;
+      height: 24px;
+    }
+
+    & svg {
+      fill: variables.$accentColor;
+    }
   }
 }
 
@@ -64,15 +82,6 @@
     & a {
       width: 32px;
       height: 32px;
-
-      // &:hover,
-      // &:focus {
-      //   filter: variables.$hoverBrightnes;
-      //   box-shadow: 0px 0px 4px rgb(255, 255, 255),
-      //     0px 0px 6px rgba(0, 0, 0, 0.8);
-
-      //   scale: 0.95;
-      // }
     }
 
     & svg {

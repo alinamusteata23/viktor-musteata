@@ -6,6 +6,7 @@ export const SiteContext = createContext();
 export const SiteProvider = ({ children }) => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [mobileMenuContent, setmobileMenuContent] = useState(false);
+  const [currentHash, setCurrentHash] = useState("");
 
   return (
     <SiteContext.Provider
@@ -14,6 +15,8 @@ export const SiteProvider = ({ children }) => {
         setMobileMenu,
         mobileMenuContent,
         setmobileMenuContent,
+        currentHash,
+        setCurrentHash,
       }}
     >
       {children}
