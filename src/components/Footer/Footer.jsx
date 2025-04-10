@@ -51,7 +51,11 @@ const Footer = () => {
         </address>
         <div className={styles.contentWrapp}>
           <h3 className={styles.footerTitle}>Menü</h3>
-          <Navigation className={styles.footerNavigation} />
+          <Navigation
+            className={styles.footerNavigation}
+            activeLink={styles.activeLink}
+            hoverLink={styles.hoverLink}
+          />
         </div>
       </div>
 

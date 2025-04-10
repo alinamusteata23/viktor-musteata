@@ -119,14 +119,13 @@
   align-items: center;
   gap: 16px;
 
-  & a:focus,
-  & a:hover {
-    @include linkHover;
-  }
-
   @media screen and (min-width: variables.$tablet) {
     align-items: flex-start;
   }
+}
+.hoverLink,
+.activeLink {
+  @include linkHover;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");

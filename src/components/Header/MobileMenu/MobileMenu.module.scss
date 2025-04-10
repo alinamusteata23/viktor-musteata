@@ -39,16 +39,17 @@
 
   font-size: 24px;
 
-  & a {
-    &:hover,
-    &:focus {
-      margin-left: 54px;
-      font-weight: 900;
-    }
-  }
-
   transform: translateX(110%);
   opacity: 0;
+}
+
+.activeLink {
+  font-weight: 900;
+}
+
+.hoverLink {
+  font-weight: 900;
+  padding-left: 54px;
 }
 
 .navVisible {

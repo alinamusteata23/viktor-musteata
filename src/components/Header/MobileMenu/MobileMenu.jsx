@@ -40,6 +40,8 @@ const MobileMenu = () => {
         className={
           mobileMenuContent ? `${styles.nav} ${styles.navVisible}` : styles.nav
         }
+        activeLink={styles.activeLink}
+        hoverLink={styles.hoverLink}
         onClick={handleClick}
       />
 
