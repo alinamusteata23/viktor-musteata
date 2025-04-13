@@ -19,7 +19,7 @@ const Faq = () => {
   };
 
   return (
-    <section className={`section ${styles.section}`} id="Faq">
+    <section className={`section ${styles.section}`} id="faq">
       <div className={`container ${styles.container}`}>
         {/* <h2 className="sectionTitle">{data.title}</h2> */}
         <ul className={styles.faqList}>

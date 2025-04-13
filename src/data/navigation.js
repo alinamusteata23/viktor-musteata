@@ -1,31 +1,31 @@
 export const navigation = [
   {
-    id: "Tiling",
+    id: "fliesenverlegung",
     title: "Fliesenverlegung",
   },
 
   {
-    id: "FloorsLaying",
+    id: "böden-verlegen",
     title: "Böden verlegen",
   },
 
   {
-    id: "PaintingWorks",
+    id: "lackierarbeiten",
     title: "Lackierarbeiten",
   },
 
   {
-    id: "FacadesRepair",
+    id: "fassade-renovierung",
     title: "Fassade Renovierung",
   },
 
   {
-    id: "ConcreteWorks",
+    id: "betonarbeiten",
     title: "Betonarbeiten",
   },
 
   {
-    id: "Contacts",
+    id: "rückmeldung",
     title: "Rückmeldung",
   },
 ];

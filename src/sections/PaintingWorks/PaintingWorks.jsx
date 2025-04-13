@@ -10,7 +10,7 @@ const PaintingWorks = () => {
     (section) => section.title === 'Lackierarbeiten'
   );
   return (
-    <section id="PaintingWorks">
+    <section id="lackierarbeiten">
       <div className={`${styles.container} container`}>
         {floorLayingData && <DescriptionComponent data={floorLayingData} />}
         <CallBtn id={styles.btn} />

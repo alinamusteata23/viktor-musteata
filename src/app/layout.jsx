@@ -30,7 +30,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="de">
+    <html lang="de-DE">
       <SiteProvider>
         <body
           className={`${niconne.variable} ${koho.variable} ${manrope.variable}`}
