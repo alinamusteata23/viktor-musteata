@@ -11,7 +11,7 @@ const FloorsLaying = () => {
     (section) => section.title === 'Böden verlegen'
   );
   return (
-    <section id="FloorsLaying">
+    <section id="böden-verlegen">
       <div className={`${styles.container} container`}>
         {floorLayingData && <DescriptionComponent data={floorLayingData} />}
         {floorLayingData && <SectionSlider data={floorLayingData} />}

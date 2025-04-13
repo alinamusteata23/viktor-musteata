@@ -14,7 +14,7 @@ const tilingData = sectionsData.find(
 
 const Tiling = () => {
   return (
-    <section id="Tiling">
+    <section id="fliesenverlegung">
       <div className={`container ${styles.container}`}>
         <h3 className="sectionTitle">{tilingData.title}</h3>
         <div className={styles.imgsWrapper}>

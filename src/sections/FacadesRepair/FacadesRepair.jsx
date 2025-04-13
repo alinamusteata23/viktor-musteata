@@ -10,7 +10,7 @@ const FacadesRepair = () => {
     (section) => section.title === 'Fassade Renovierung'
   );
   return (
-    <section id="FacadesRepair">
+    <section id="fassade-renovierung">
       <div className={`${styles.container} container`}>
         {floorLayingData && <DescriptionComponent data={floorLayingData} />}
 

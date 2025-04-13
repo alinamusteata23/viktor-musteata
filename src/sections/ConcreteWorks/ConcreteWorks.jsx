@@ -11,7 +11,7 @@ const ConcreteWorks = () => {
     (section) => section.title === 'Betonarbeiten'
   );
   return (
-    <section id="ConcreteWorks">
+    <section id="betonarbeiten">
       <div className={`${styles.container} container`}>
         {floorLayingData && <DescriptionComponent data={floorLayingData} />}
         {floorLayingData && <SectionSlider data={floorLayingData} />}
