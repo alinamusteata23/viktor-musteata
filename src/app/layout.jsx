@@ -23,9 +23,25 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-  title: "Perfekte Handwerkskunst für Ihr Zuhause",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SEO_URL),
+  title: "Handwerk mit Herz: Fliesen, Böden & mehr - von Viktor Musteata",
   description:
-    "Wir bieten professionelle Fliesenverlegung für Sie, um Ihrem Raum ein modernes und elegantes Aussehen zu verleihen. Mit hochwertigen Materialien und präziser Ausführung sorgen wir für langlebige und wasserdichte Ergebnisse. Vertrauen Sie auf unsere Erfahrung, um Ihren Raum in einen stilvollen Rückzugsort zu verwandeln Wir bieten professionelle Fliesenverlegung für Sie, um Ihrem Raum ein modernes und elegantes Aussehen zu ssehen.",
+    "Wir sind spezialisiert auf professionelle Fliesenverlegung und helfen Ihnen dabei, Ihren Räumen ein modernes und elegantes Ambiente zu verleihen!",
+    keywords: [
+      "Fliesenlegerdienste",
+      "Boden verlegen",
+      "Lackierarbeiten",
+      "Fassadensanierung",
+      "Betonarbeiten",
+      "Renovierung",
+      "Innenausbau",
+    ],
+    alternates: {
+      canonical: process.env.NEXT_PUBLIC_SEO_URL,
+      languages: {
+        'de': `${process.env.NEXT_PUBLIC_SEO_URL}`,
+      },
+    },
 };
 
 export default function RootLayout({ children }) {

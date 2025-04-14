@@ -13,6 +13,7 @@ const SocLinks = ({ className }) => {
             href={el.href}
             target="_blank"
             className={styles.socLink}
+            aria-label={el.title}
           >
             <svg>
               <use href={el.icon}></use>

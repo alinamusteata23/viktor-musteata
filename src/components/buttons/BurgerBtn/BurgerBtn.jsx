@@ -32,6 +32,7 @@ const BurgerBtn = () => {
           : styles.burgerBtn
       }
       onClick={toggleMobileMenu}
+      aria-label="Burger menu"
     >
       <div className={styles.middleLine}></div>
     </button>
