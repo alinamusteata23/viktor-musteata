@@ -6,7 +6,7 @@ export const sectionsData = [
     title: 'Über uns',
     imgSrc: '/imgs/about-us.webp',
     imgAlt: "Master's photo",
-    text: 'Wir bieten professionelle Fliesenverlegung für Sie, um Ihrem Raum ein modernes und elegantes Aussehen zu verleihen. Mit hochwertigen Materialien und präziser Ausführung sorgen wir für langlebige und wasserdichte Ergebnisse. Vertrauen Sie auf unsere Erfahrung, um Ihren Raum in einen stilvollen Rückzugsort zu verwandeln Wir bieten professionelle Fliesenverlegung für Sie, um Ihrem Raum ein modernes und elegantes Aussehen zu ssehen',
+    text: 'Wir sind spezialisiert auf professionelle Fliesenverlegung und helfen Ihnen dabei, Ihren Räumen ein modernes und elegantes Ambiente zu verleihen. Durch den Einsatz hochwertiger Materialien und präziser Handwerkskunst schaffen wir langlebige, wasserdichte Ergebnisse, auf die Sie sich verlassen können. Vertrauen Sie auf unsere langjährige Erfahrung - wir machen aus Ihrem Zuhause einen stilvollen Rückzugsort.',
     statistics: [
       {
         quantity: '100+',
@@ -40,7 +40,7 @@ export const sectionsData = [
         imgAlt: 'tiling example',
       },
     ],
-    text: 'Wir bieten professionelle Fliesenverlegung für Sie, um Ihrem Raum ein modernes und elegantes Aussehen zu verleihen. Mit hochwertigen Materialien und präziser Ausführung sorgen wir für langlebige und wasserdichte Ergebnisse. Vertrauen Sie auf unsere Erfahrung, um Ihren Raum in einen stilvollen Rückzugsort zu verwandeln',
+    text: 'Ob Bad, Küche oder Wohnzimmer - wir bringen Stil und Präzision in Ihre vier Wände. Hochwertige Materialien, perfekte Ausführung, langlebige Ergebnisse. Damit Ihr Raum nicht nur modern aussieht, sondern sich auch so anfühlt. Fliesen verlegen ist für uns kein Job - es ist Kunst.',
     sliderImages: [
       {
         id: v4(),
@@ -65,7 +65,7 @@ export const sectionsData = [
     title: 'Böden verlegen',
     imgSrc: '/imgs/Böden verlegen.webp',
     imgAlt: 'Böden verlegen',
-    text: 'Wir garantieren Professionalität und erstklassige Qualität bei der Verlegung von Böden, unter Einsatz neuester Technologien für langanhaltende und ästhetische Ergebnisse.',
+    text: 'Laminat, Parkett oder Vinyl - wir finden den passenden Bodenbelag für Ihr Zuhause. Saubere Arbeit, moderne Technik und ein Finish, das begeistert. Ein guter Boden trägt nicht nur das Haus, sondern auch Ihr Gefühl von Zuhause.',
     sliderImages: [
       {
         id: v4(),
@@ -90,7 +90,7 @@ export const sectionsData = [
     title: 'Lackierarbeiten',
     imgSrc: '/imgs/Lackierarbeiten.webp',
     imgAlt: 'Lackierarbeiten',
-    text: 'Wir garantieren Professionalität und erstklassige Qualität bei der Verlegung von Böden, unter Einsatz neuester Technologien für langanhaltende und ästhetische Ergebnisse.',
+    text: 'Wir verleihen Wänden, Türen und Oberflächen frischen Glanz. Ob dezent oder auffällig – unsere Farben machen Eindruck. Ein Pinselstrich, der den Unterschied macht.',
   },
 
   {
@@ -98,7 +98,7 @@ export const sectionsData = [
     title: 'Fassade Renovierung',
     imgSrc: '/imgs/Fassade Renovierung.webp',
     imgAlt: 'Fassade Renovierung',
-    text: 'Wir garantieren Professionalität und erstklassige Qualität bei der Verlegung von Böden, unter Einsatz neuester Technologien für langanhaltende und ästhetische Ergebnisse.',
+    text: 'Die Fassade ist die Visitenkarte Ihres Hauses. Mit uns wird sie wieder zum echten Hingucker – wetterfest, gepflegt und mit Charakter. Wir lassen Ihr Haus im besten Licht erscheinen.',
     sliderImages: [
       {
         id: v4(),
@@ -123,7 +123,7 @@ export const sectionsData = [
     title: 'Betonarbeiten',
     imgSrc: '/imgs/Betonarbeiten.webp',
     imgAlt: 'Betonarbeiten',
-    text: 'Wir garantieren Professionalität und erstklassige Qualität bei der Verlegung von Böden, unter Einsatz neuester Technologien für langanhaltende und ästhetische Ergebnisse.',
+    text: 'Robust. Maßgeschneidert. Professionell. Von der Terrasse bis zur Einfahrt – wir schaffen stabile Lösungen mit Stil. Stark im Material, stark im Handwerk.',
     sliderImages: [
       {
         id: v4(),
@@ -149,21 +149,21 @@ export const sectionsData = [
     reviews: [
       {
         id: v4(),
-        author: 'Wade Warren',
+        author: 'Andreas K.',
         rating: 4.5,
-        comment: 'Awesome website and funnel for your business',
+        comment: 'Top Arbeit - schnell, sauber, zuverlässig!',
       },
       {
         id: v4(),
-        author: 'Ilon Mask',
+        author: 'Sabine A.',
         rating: 5.0,
-        comment: 'Funnel for business and website',
+        comment: 'Mein Wohnzimmer sieht jetzt fantastisch aus!',
       },
       {
         id: v4(),
-        author: 'Warren Wade',
+        author: 'Markus N.',
         rating: 4.5,
-        comment: 'Funnel for your business and awesome website',
+        comment: 'Endlich Handwerker, denen man vertrauen kann!',
       },
     ],
   },
