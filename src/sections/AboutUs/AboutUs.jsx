@@ -10,13 +10,15 @@ const AboutUs = () => {
       <div className={`container ${styles.container}`}>
         <h2 className={styles.title}>{data?.title}</h2>
         <div className={styles.infoWrapper}>
-          <Image
-            className={styles.img}
-            src={data?.imgSrc}
-            alt={data?.imgAlt}
-            width={280}
-            height={334}
-          />
+          <div className={styles.imgWrap}>
+            <Image
+              className={styles.img}
+              src={data?.imgSrc}
+              alt={data?.imgAlt}
+              sizes="(max-width: 743px) 95vw, (max-width: 1279px) 65vw, 480px"
+              fill={true}
+            />
+          </div>
           <p className={styles.infoText}>{data.text}</p>
         </div>
         <ul className={styles.dataList}>
