@@ -23,7 +23,7 @@
   row-gap: 20px;
   padding: 0 32px;
   @media screen and (min-width: variables.$tablet) {
-    row-gap: 64px;
+    row-gap: 32px;
     padding: 0 64px;
   }
   @media screen and (min-width: variables.$laptop) {
