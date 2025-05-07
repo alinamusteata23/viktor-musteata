@@ -15,7 +15,7 @@ const Logo = ({ className }) => {
         setCurrentHash("");
       }}
     >
-      Viktor Musteata
+      Victor Musteata
     </a>
   );
 };
