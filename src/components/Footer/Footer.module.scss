@@ -73,7 +73,8 @@
   width: 100%;
   max-width: 300px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 16px;
 
   & a {
     width: 32px;
@@ -85,8 +86,8 @@
   }
 
   @media screen and (min-width: variables.$tablet) {
-    justify-content: space-between;
     width: 176px;
+    justify-content: flex-start;
   }
 }
 
