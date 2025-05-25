@@ -3,6 +3,7 @@ import "./globals.scss";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { SiteProvider } from "@/context/SiteContext";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const niconne = Niconne({
   variable: "--font-niconne",
@@ -45,8 +46,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
   return (
     <html lang="de-DE">
+      <GoogleTagManager gtmId={`${GTM_ID}`} />
       <SiteProvider>
         <body
           className={`${niconne.variable} ${koho.variable} ${manrope.variable}`}
