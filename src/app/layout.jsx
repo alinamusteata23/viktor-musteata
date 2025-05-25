@@ -54,6 +54,14 @@ export default function RootLayout({ children }) {
         <body
           className={`${niconne.variable} ${koho.variable} ${manrope.variable}`}
         >
+          <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
           <Header />
           <main>{children}</main>
           <Footer />
